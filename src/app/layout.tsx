@@ -25,9 +25,9 @@ export default function RootLayout({
 }>) {
   // Define navigation links
   const links = [
-    { text: "About me", href: "#whoami" },
-    { text: "My work", href: "#mywork" },
-    { text: "Blog", href: "#blog" },
+    { text: "About me", href: "/#whoami" },
+    { text: "My work", href: "/#mywork" },
+    { text: "Blog", href: "/blog" },
   ];
   return (
     <html lang="en">
