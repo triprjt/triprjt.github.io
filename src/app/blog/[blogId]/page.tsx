@@ -1,7 +1,7 @@
 "use client"
 import { useParams } from 'next/navigation'
 
-const page = () => {
+const Page = () => {
   const { blogId } = useParams()
   const blogContent = [{ id: 1, title: "Blog meme generator", description: "Paste your blog content and automaticallyinsert memes from a directory of 1000 +memes " },
   { id: 2, title: "Charchagram", description: "A place to discuss root level issues and know your elected representatives" },
@@ -20,4 +20,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
