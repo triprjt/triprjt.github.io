@@ -57,6 +57,7 @@ export default function Home() {
       title: "Blog meme generator",
       description:
         "Paste your blog content and automaticallyinsert memes from a directory of 1000 +memes ",
+        link: '/'
     },
     {
       id: 2,
@@ -70,6 +71,7 @@ export default function Home() {
       title: "Title 3",
       description:
         "Paste your blog content and automaticallyinsert memes from a directory of 1000 +memes ",
+        link: "/"
     },
   ];
   const cardsIntroSection = [
@@ -271,6 +273,9 @@ export default function Home() {
                     <a
                       href="#"
                       className="flex items-center justify-center gap-2"
+                      onClick={() => {
+                        window.open(ele.link, "_blank");
+                      }}
                     >
                       View Project
                       <svg
