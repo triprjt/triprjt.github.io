@@ -63,6 +63,7 @@ export default function Home() {
       title: "Charchagram",
       description:
         "A place to discuss root level issues and know your elected representatives",
+        link: "https://charchagram.com"
     },
     {
       id: 3,
