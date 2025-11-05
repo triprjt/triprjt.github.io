@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -68,10 +69,10 @@ export default function Home() {
     },
     {
       id: 3,
-      title: "Title 3",
+      title: "Grammit",
       description:
-        "Paste your blog content and automaticallyinsert memes from a directory of 1000 +memes ",
-        link: "/"
+        "Practice DSA across any platform and track your progress",
+        link: "https://github.com/triprjt/grammitApp/tree/main"
     },
   ];
   const cardsIntroSection = [
