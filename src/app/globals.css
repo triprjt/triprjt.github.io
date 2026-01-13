@@ -120,3 +120,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-background {
+  background-color: #eff0f3;
+}
+.headline-color {
+  color: #272343;
+}
+.paragraph-color {
+  color: #2d334a;
+}
+.button-color-background {
+  color: #ffd803;
+}
+.button-text-color {
+  color: #272343;
+}

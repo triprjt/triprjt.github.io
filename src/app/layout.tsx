@@ -58,7 +58,7 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
-        <footer className="w-full text-center p-4 border-t text-xs text-muted-foreground mt-12">
+        <footer className="w-full text-center p-4 border-t text-xs text-muted-foreground mt-20">
           &copy; {new Date().getFullYear()} Your Name. All rights reserved.
         </footer>
       </body>
