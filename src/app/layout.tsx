@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Button } from "@/components/ui/button";
+import { MobileMenu } from "./MobileMenu";
+import { OfferWrapper } from "./OfferWrapper";
+import Footer from "./Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,34 +36,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="w-full flex items-center p-4 border-b bg-white sticky top-0 z-10 shadow-sm">
-          {/* Logo on the left */}
-          <a href="#intro" className="font-bold text-lg mr-8 select-none">
-            trip<span className="text-blue-500">rjt</span>
-          </a>
-          {/* Navigation links and button on the right */}
-          <nav className="flex-1">
-            <ul className="flex justify-end items-center gap-6 w-full">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="hover:underline">
-                    {link.text}
-                  </a>
-                </li>
-              ))}
-              <li>
-                <Button asChild>
-                  <a href="#contact">Let's talk</a>
-                </Button>
-              </li>
-            </ul>
-          </nav>
+        <OfferWrapper />
+        <header className="header-container sticky top-0 z-10">
+          {/* //logo */}
+          <div className="flex items-center justify-between">
+            <a><span>trip<span className="text-blue-500">rjt</span></span></a>
+            <MobileMenu />
+            <button className="cta-button-header hidden md:block border border-red-500">Let's talk</button>
+          </div>
         </header>
         {children}
-        <footer className="w-full text-center p-4 border-t text-xs text-muted-foreground mt-20">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
-        </footer>
+        
       </body>
+      <Footer/>
     </html>
   );
 }

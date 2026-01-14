@@ -11,12 +11,26 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Flyer from "./Flyer";
+import FAQ from "./FAQ";
+import Bootcamp from "./bootcamp";
+import WhoShouldJoin from "./whoshouldjoin";
 export default function Home() {
- 
+
   return (
-    <main className="flex flex-col items-center w-4/5 mx-auto">
-      {/* Intro Section */}
-     <Header/>
+    <main className="min-h-[90vh] w-full">
+      <section className="full-bleed-section full-bleed-dark">
+        <Flyer />
+      </section>
+      <section className="full-bleed-section full-bleed-dark">
+        <Bootcamp />
+      </section>
+      <section className="full-bleed-section full-bleed-dark">
+        <WhoShouldJoin />
+      </section>
+      <section className="full-bleed-section full-bleed-light">
+        <FAQ />
+      </section>
     </main>
   );
 }
