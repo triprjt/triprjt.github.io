@@ -1,9 +1,11 @@
 // next.config.js
 const nextConfig = {
-  // Optional: force revalidation of router cache on client after X seconds
-  staleTimes: {
-    dynamic: 30,     // seconds – client re-fetches dynamic routes
-    static: 180,     // seconds – client re-fetches static pages
+  // ✅ Move staleTimes inside experimental
+  experimental: {
+    staleTimes: {
+      dynamic: 30,     // seconds – client re-fetches dynamic routes
+      static: 180,     // seconds – client re-fetches static pages
+    },
   },
 
   async headers() {

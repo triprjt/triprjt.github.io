@@ -23,10 +23,10 @@ const WebinarPoster = ({
     console.log('dateStr from poster', dateStr);
 
     return (
-        <div className="flex flex-col items-center gap-8 w-full">
+        <div className="flex flex-col items-center gap-8 w-full h-full">
             <div
                 ref={posterRef}
-                className="relative w-full min-h-[60vh] max-w-[600px] aspect-[4/6] md:aspect-[4/5] bg-[#5DDE5D] overflow-hidden shadow-2xl font-sans"
+                className="relative aspect-[4/5] max-w-[40dvh] max-h-[40dvh] sm:max-w-[35dvh] sm:max-h-[50dvh] md:max-h-[100vh] md:max-w-[70vw] bg-[#5DDE5D] overflow-hidden shadow-2xl font-sans "
                 style={{
                     background: "linear-gradient(135deg, #6ae96a 0%, #4cd14c 100%)"
                 }}
@@ -37,7 +37,7 @@ const WebinarPoster = ({
                 </div>
 
                 {/* 2. Main Content Container */}
-                <div className="relative p-6 md:p-10 flex flex-col h-fit justify-center gap-12 md:justify-between">
+                <div className="relative p-6 md:p-10 flex flex-col h-fit justify-center gap-6 md:gap-12 md:justify-between">
 
                     {/* Header Text */}
                     <div className="space-y-4 md:space-y-6 mt-4 md:mt-0 relative">

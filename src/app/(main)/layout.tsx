@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <>
         {/* <OfferWrapper /> */}
-        <header className="header-container sticky top-0">
+        <header className="header-container sticky top-0 z-[100]">
           {/* //logo */}
           <div className="flex items-center justify-between">
             <Link href="/" className="cursor-pointer w-24 p-4 my-auto align-middle items-center"><span className="text-blue-500 text-2xl">10x<span className="text-white text-2xl">AI</span><span className="text-white text-2xl">Bootcamp</span></span></Link>

@@ -40,7 +40,7 @@ export default async function WebinarLandingPage({ params }: Props) {
     <div className="min-h-[80vh] bg-[#050505] flex items-center justify-center p-4 md:p-12">
       <div className="w-full mx-auto">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center justify-center">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16 items-center justify-center">
           
           {/* Left Column: The Poster */}
           <div className="flex flex-col gap-6 sticky">
@@ -56,7 +56,7 @@ export default async function WebinarLandingPage({ params }: Props) {
             </div>
             
             {/* Optional: Mobile-only helper text */}
-            <p className="lg:hidden text-center text-gray-500 text-sm">
+            <p className="xl:hidden text-center text-gray-500 text-sm">
               Scroll down to register
             </p>
           </div>
