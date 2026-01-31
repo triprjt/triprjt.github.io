@@ -195,7 +195,7 @@ const Webinar = () => {
         target="_blank" 
         rel="noopener noreferrer"
         onClick={() => handleExternalLinkClick(event)}
-        className={`absolute top-4 z-10 right-4 p-2.5 rounded-full backdrop-blur-md border transition-colors
+        className={`absolute top-4 right-4 p-2.5 rounded-full backdrop-blur-md border transition-colors
           ${isActive 
               ? 'bg-white/5 hover:bg-white/10 border-white/10 text-gray-300 hover:text-white' 
               : 'hidden'}
@@ -211,7 +211,7 @@ const Webinar = () => {
         
         {/* Active Badge */}
         {isActive && (
-          <div className="absolute top-0 left-0 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-br-lg z-10 animate-pulse flex items-center gap-1 shadow-md">
+          <div className="absolute top-0 left-0 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-br-lg animate-pulse flex items-center gap-1 shadow-md">
             <AlertCircle className="w-3 h-3" />
             FILLING FAST
           </div>
