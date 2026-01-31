@@ -26,7 +26,7 @@ const WebinarPoster = ({
         <div className="flex flex-col items-center gap-8 w-full h-full">
             <div
                 ref={posterRef}
-                className="relative aspect-[4/5] base:max-w-[60dvh] base:max-h-[100dvh] sm:max-w-[35dvh] sm:max-h-[50dvh] md:max-h-[100vh] md:max-w-[70vw] bg-[#5DDE5D] overflow-hidden shadow-2xl font-sans "
+                className="relative rounded-2xl base:aspect-[4/5] base:max-w-[40dvh] base:max-h-[100dvh] sm:max-w-[35dvh] sm:max-h-[50dvh] md:max-h-[100vh] md:max-w-[70vw] bg-[#5DDE5D] overflow-hidden shadow-2xl font-sans "
                 style={{
                     background: "linear-gradient(135deg, #6ae96a 0%, #4cd14c 100%)"
                 }}
@@ -37,7 +37,7 @@ const WebinarPoster = ({
                 </div>
 
                 {/* 2. Main Content Container */}
-                <div className="relative p-1 md:p-10 flex flex-col h-fit justify-center gap-6 md:gap-12 md:justify-between">
+                <div className="relative p-6 md:p-10 flex flex-col h-fit justify-center gap-6 md:gap-12 md:justify-between">
 
                     {/* Header Text */}
                     <div className="space-y-4 md:space-y-6 mt-4 md:mt-0 relative">
@@ -45,7 +45,7 @@ const WebinarPoster = ({
                         {/* 4. Conditional Rendering based on URL type */}
                         {webinarType === 'business' ? (
                             // BUSINESS HEADLINE
-                            <h1 className="text-black text-4xl sm:text-5xl md:text-5xl font-extrabold leading-[0.95] tracking-tight z-15 line-height-8">
+                            <h1 className="text-black base:text-4xl sm:text-4xl md:text-5xl font-extrabold leading-[0.95] tracking-tight z-15 line-height-8">
                                 Learn how to<br />
                                 get maximum <br />
                                 leverage with AI<br />
