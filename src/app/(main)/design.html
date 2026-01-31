@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- The Orange Gradient Background -->
+        <div class="orange-bg"></div>
+
+        <!-- The Glass Cards Container -->
+        <div class="glass-grid">
+            
+            <!-- 1. Video Player Card -->
+            <div class="card video-card">
+                <div class="icon-top-right">
+                    <!-- Maximize Icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                    </svg>
+                </div>
+                
+                <div class="play-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                        <div class="progress-dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Articles Card -->
+            <div class="card small-card">
+                <div class="icon-large">
+                    <!-- Document Icon -->
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <line x1="10" y1="9" x2="8" y2="9"></line>
+                    </svg>
+                </div>
+                <h3>Articles</h3>
+            </div>
+
+            <!-- 3. Downloads Card -->
+            <div class="card small-card">
+                <div class="icon-large">
+                    <!-- Cloud Download Icon -->
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </div>
+                <h3>Downloads</h3>
+            </div>
+
+            <!-- 4. Course Contents Card -->
+            <div class="card list-card">
+                <div class="card-header">
+                    <h3>Course contents</h3>
+                </div>
+                <ul class="course-list">
+                    <li>5 hours on-demand video</li>
+                    <li>8 downloadable resources</li>
+                    <li>Certificate of completion</li>
+                    <li>11 articles</li>
+                    <li>Access mobile and TV</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
