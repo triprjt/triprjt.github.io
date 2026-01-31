@@ -45,7 +45,7 @@ const WebinarPoster = ({
                         {/* 4. Conditional Rendering based on URL type */}
                         {webinarType === 'business' ? (
                             // BUSINESS HEADLINE
-                            <h1 className="text-black base:text-4xl sm:text-4xl md:text-5xl font-extrabold leading-[0.95] tracking-tight z-15 line-height-8">
+                            <h1 className="text-black base:text-4xl sm:text-4xl md:text-5xl font-extrabold leading-[0.95] tracking-tight line-height-8">
                                 Learn how to<br />
                                 get maximum <br />
                                 leverage with AI<br />
@@ -53,7 +53,7 @@ const WebinarPoster = ({
                             </h1>
                         ) : (
                             // DEFAULT / TECHNICAL HEADLINE
-                            <h1 className="text-black text-4xl sm:text-5xl md:text-5xl font-extrabold leading-[0.95] tracking-tight z-15 line-height-8">
+                            <h1 className="text-black text-4xl sm:text-5xl md:text-5xl font-extrabold leading-[0.95] tracking-tight line-height-8">
                                 Stop being<br />
                                 confused about<br />
                                 AI in 2026
@@ -67,7 +67,7 @@ const WebinarPoster = ({
                     </div>
 
                     {/* Feature Box */}
-                    <div className="mt-2 md:mt-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-4 md:p-6 w-full md:w-[85%] shadow-lg z-20">
+                    <div className="mt-2 md:mt-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-4 md:p-6 w-full md:w-[85%] shadow-lg">
                         {webinarType === 'business' ? (
                             // BUSINESS FEATURES
                             <ul className="flex flex-col gap-3 md:gap-4">
@@ -86,8 +86,8 @@ const WebinarPoster = ({
                     </div>
 
                     {/* Footer Section */}
-                    <div className="flex justify-between items-end mt-4 relative z-20">
-                        <div className="flex flex-col items-start gap-1 mb-2 md:mb-4 relative z-30">
+                    <div className="flex justify-between items-end mt-4 relative">
+                        <div className="flex flex-col items-start gap-1 mb-2 md:mb-4 relative">
                             <div className="bg-[#ffaa00] text-black font-bold px-3 py-1 text-sm md:text-lg shadow-md -rotate-1 whitespace-nowrap">
                                 Date: {displayDate}
                             </div>
@@ -100,7 +100,7 @@ const WebinarPoster = ({
                             </div>
                         </div>
 
-                        <div className="absolute -right-4 bottom-[-20px] md:-right-22 md:-bottom-10 w-40 sm:w-48 md:w-80 h-auto overflow-visible z-10 pointer-events-none">
+                        <div className="absolute -right-4 bottom-[-20px] md:-right-22 md:-bottom-10 w-40 sm:w-48 md:w-80 h-auto overflow-visible pointer-events-none">
                             <Image
                                 src="/images/founder.jpg"
                                 alt="Rajat Tripathi"
