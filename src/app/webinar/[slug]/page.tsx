@@ -37,7 +37,7 @@ export default async function WebinarLandingPage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-[80vh] bg-[#050505] flex items-center justify-center p-4 md:p-12">
+    <div className="min-h-[80vh] bg-[#050505] flex items-center justify-center p-2 md:p-4">
       <div className="w-full mx-auto">
         
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16 items-center justify-center">

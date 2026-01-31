@@ -26,18 +26,18 @@ const WebinarPoster = ({
         <div className="flex flex-col items-center gap-8 w-full h-full">
             <div
                 ref={posterRef}
-                className="relative aspect-[4/5] max-w-[40dvh] max-h-[40dvh] sm:max-w-[35dvh] sm:max-h-[50dvh] md:max-h-[100vh] md:max-w-[70vw] bg-[#5DDE5D] overflow-hidden shadow-2xl font-sans "
+                className="relative aspect-[4/5] base:max-w-[60dvh] base:max-h-[100dvh] sm:max-w-[35dvh] sm:max-h-[50dvh] md:max-h-[100vh] md:max-w-[70vw] bg-[#5DDE5D] overflow-hidden shadow-2xl font-sans "
                 style={{
                     background: "linear-gradient(135deg, #6ae96a 0%, #4cd14c 100%)"
                 }}
             >
                 {/* 1. Abstract 3D Cube */}
-                <div className="absolute -right-10 -top-8 md:-right-16 md:-top-10 w-32 h-32 md:w-48 md:h-48 bg-[#00c950] transform rotate-12 skew-y-12 rounded-3xl shadow-lg z-10">
+                <div className="absolute -right-10 -top-8 md:-right-16 md:-top-10 w-32 h-32 md:w-48 md:h-48 bg-[#00c950] transform rotate-12 skew-y-12 rounded-3xl shadow-lg">
                     <div className="absolute top-0 left-0 w-full h-full bg-white/10 rounded-3xl backdrop-blur-sm"></div>
                 </div>
 
                 {/* 2. Main Content Container */}
-                <div className="relative p-6 md:p-10 flex flex-col h-fit justify-center gap-6 md:gap-12 md:justify-between">
+                <div className="relative p-1 md:p-10 flex flex-col h-fit justify-center gap-6 md:gap-12 md:justify-between">
 
                     {/* Header Text */}
                     <div className="space-y-4 md:space-y-6 mt-4 md:mt-0 relative">
