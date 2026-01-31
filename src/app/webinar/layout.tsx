@@ -10,9 +10,9 @@ export default function WebinarLayout({
   return (
     <div className="full-bleed-dark">
       {/* --- WEBINAR SPECIFIC HEADER --- */}
-      <header className="header-container sticky top-0 z-10">
+      <header className="header-container sticky top-0">
           {/* //logo */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between z-30">
             <a href="/" className="cursor-pointer w-24 p-4 my-auto align-middle items-center"><span className="text-blue-500 text-2xl">10x<span className="text-white text-2xl">AI</span><span className="text-white text-2xl">Bootcamp</span></span></a>
             <MobileMenu />
             <button className="cta-button-header hidden md:block">Let's talk</button>

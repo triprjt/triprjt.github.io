@@ -209,7 +209,7 @@ const Webinar = () => {
         target="_blank" 
         rel="noopener noreferrer"
         onClick={() => handleExternalLinkClick(event)}
-        className={`absolute top-4 right-4 z-20 p-2.5 rounded-full backdrop-blur-md border transition-colors
+        className={`absolute top-4 z-10 right-4 p-2.5 rounded-full backdrop-blur-md border transition-colors
           ${isActive 
               ? 'bg-white/5 hover:bg-white/10 border-white/10 text-gray-300 hover:text-white' 
               : 'hidden'}
@@ -330,9 +330,10 @@ const Webinar = () => {
               ))}
           </div>
 
-          <button 
-              onClick={() => isActive && setOpen(true)} 
-              disabled={!isActive}
+          <a 
+              href={event.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
               className={`w-full sm:w-auto font-bold py-3 px-8 rounded-xl transition-all flex items-center justify-center gap-2 text-sm
                   ${isActive 
                       ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-900/50' 
@@ -341,7 +342,7 @@ const Webinar = () => {
           >
             {isActive ? 'Reserve My Spot' : 'Registration Closed'}
             {isActive && <ArrowRight className="w-4 h-4" />}
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -353,7 +354,7 @@ const Webinar = () => {
       <div className="w-full h-full flex items-center justify-center mx-auto flex flex-col gap-10 p-2 md:p-8">
         
         {/* === SECTION 1: Future Events (Always Visible) === */}
-        <div className="flex flex-col gap-8 w-[60%]">
+        <div className="flex flex-col gap-8 w-[80%] md:w-[60%]">
           {futureEvents.map((event) => (
             <WebinarCard key={event.id} event={event} isActive={true} />
           ))}
