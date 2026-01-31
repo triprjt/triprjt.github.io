@@ -2,6 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import WebinarBanner from "../../(main)/webinarPoster"; // Keep your existing path
 import RegistrationForm from "../../(main)/components/registrationForm"; // Update import path
+import Link from "next/link";
 
 // 1. Mock Data Database
 const WEBINARS = {
@@ -46,7 +47,7 @@ export default async function WebinarLandingPage({ params }: Props) {
           <div className="flex flex-col gap-6 sticky">
             {/* Context Breadcrumb */}
             <div style={{ marginBottom: "40px" }} className="text-gray-400 text-sm md:text-base font-mono uppercase tracking-widest mb-10">
-              Webinars / <span className="text-white">{webinarData.title}</span>
+              <Link href="/webinar" className="text-gray-400 hover:text-white">Webinars</Link> / <span className="text-white">{webinarData.title}</span>
             </div>
 
             {/* Your Existing Poster Component */}
