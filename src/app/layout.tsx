@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Button } from "@/components/ui/button";
+import Footer from "./(main)/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,34 +33,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <header className="w-full flex items-center p-4 border-b bg-white sticky top-0 z-10 shadow-sm">
-          {/* Logo on the left */}
-          <a href="#intro" className="font-bold text-lg mr-8 select-none">
-            trip<span className="text-blue-500">rjt</span>
-          </a>
-          {/* Navigation links and button on the right */}
-          <nav className="flex-1">
-            <ul className="flex justify-end items-center gap-6 w-full">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="hover:underline">
-                    {link.text}
-                  </a>
-                </li>
-              ))}
-              <li>
-                <Button asChild>
-                  <a href="#contact">Let's talk</a>
-                </Button>
-              </li>
-            </ul>
-          </nav>
-        </header>
+      >        
         {children}
-        <footer className="w-full text-center p-4 border-t text-xs text-muted-foreground mt-12">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
-        </footer>
       </body>
     </html>
   );
