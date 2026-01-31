@@ -279,7 +279,7 @@ export default function CurriculumDashboard() {
     <div className="min-h-[80vh] w-full flex flex-col justify-start md:justify-around items-center text-[#0f0e17] bg-[#eff0f3] py-12 px-1 md:p-4 font-body">
       
       {/* Main Heading */}
-      <h1 className="text-3xl md:text-5xl font-heading font-bold text-[#0f0e17] tracking-tight mb-8">
+      <h1 style={{ marginBottom: '40px' }} className="text-3xl md:text-5xl font-heading font-bold text-[#0f0e17] tracking-tight mb-8">
         Curriculum
       </h1>
 

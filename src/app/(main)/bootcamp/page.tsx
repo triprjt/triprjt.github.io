@@ -25,7 +25,7 @@ export default function BootcampComponent() {
     const whatIsCoveredInBootcamp = [
         { id: 1, title: 'Perfectly curated roadmap', icon: <NonCoderGraphic />, image: '/images/sec1.png', description: 'No more jumping between random YouTube tutorials. Follow a clear, logical path designed to build your skills step-by-step.' },
         { id: 2, title: 'Clear and byte sized lessons', icon: <DiagonalBox />, image: '/images/hsection.png', description: 'Each lesson is focused on building your intuition on AI–without any fluff. Suits your busy schedule.' },
-        { id: 3, title: 'Specially designed for non-tech background people', icon: <TechStackGrid />, image: '/images/automation.png', description: 'Build your own AI automations –even with no tech background' },        
+        { id: 3, title: 'Beginner friendly ', icon: <TechStackGrid />, image: '/images/automation.png', description: 'Build your own AI automations –even with no tech background' },        
     ];
 
     const WhyYouWillLoveLearningHere = () => {
@@ -36,7 +36,7 @@ export default function BootcampComponent() {
                     <div
                         key={item.id}
                         // Switch to a 2-column grid. Text on left, Image on right.
-                        className="grid grid-cols-1 md:grid-cols-2 gap-4 border border-red-500 items-center justify-center border-b border-gray-200 md:w-3/5 pb-12 last:border-0"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center border-b border-gray-200 md:w-3/5 pb-12 last:border-0"
                     >
                         {/* Column 1: Title */}
                         <div className={`flex flex-col justify-center gap-2 md:gap-4 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
