@@ -17,7 +17,7 @@ export default function OurStoryPage() {
                     <div className="order-1 flex flex-col items-center justify-center text-center space-y-6 md:space-y-8">
                         
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight leading-[1.1]">
-                            Hi, I'm <br className="block md:hidden" />
+                            Hi, I&apos;m <br className="block md:hidden" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8906] to-[#f25f4c]">
                                 Rajat Tripathi.
                             </span>
@@ -28,7 +28,7 @@ export default function OurStoryPage() {
                            This ensures it fills the screen on mobile but stays neat on desktop 
                         */}
                         <p className="text-base md:text-xl text-[#a7a9be] w-full md:max-w-lg mx-auto leading-relaxed">
-                            I have spent 10+ years in the software industry. My goal isn't just to teach AI – it's to help you think like an AI engineer and build skills that you will use for life.
+                            I have spent 10+ years in the software industry. My goal isn&apos;t just to teach AI – it&apos;s to help you think like an AI engineer and build skills that you will use for life.
                         </p>
                     </div>
 

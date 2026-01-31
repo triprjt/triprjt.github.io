@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
 
@@ -61,10 +62,10 @@ export const MobileMenu = () => {
 
       {/* Desktop Navigation (Visible on md+) */}
       <nav className="hidden md:flex items-center justify-center gap-8 nav-a">
-        <a className={`nav-link ${isActive("/bootcamp") ? activeBorderClass : ""}`} href="/bootcamp">Bootcamp</a>
-        <a className={`nav-link ${isActive("/webinar") ? activeBorderClass : ""}`} href="/webinar">Webinar</a>
-        <a className={`nav-link ${isActive("/our-story") ? activeBorderClass : ""}`} href="/our-story">About us</a>
-        <a className={`nav-link ${isActive("/services") ? activeBorderClass : ""}`} href="/services">Services</a>
+        <Link className={`nav-link ${isActive("/bootcamp") ? activeBorderClass : ""}`} href="/bootcamp">Bootcamp</Link>
+        <Link className={`nav-link ${isActive("/webinar") ? activeBorderClass : ""}`} href="/webinar">Webinar</Link>
+        <Link className={`nav-link ${isActive("/our-story") ? activeBorderClass : ""}`} href="/our-story">About us</Link>
+        <Link className={`nav-link ${isActive("/services") ? activeBorderClass : ""}`} href="/services">Services</Link>
         {/* Note: I removed the Let's Talk button from here if you want it distinct, add it back if needed */}
       </nav>
 
@@ -96,22 +97,21 @@ export const MobileMenu = () => {
 
           {/* Mobile Nav Links */}
           <nav className="flex flex-col items-center gap-8 text-xl font-medium">
-            <a href="/bootcamp" className={`nav-link ${isActive("/bootcamp") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
+            <Link href="/bootcamp" className={`nav-link ${isActive("/bootcamp") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
               Bootcamp
-            </a>
-            <a href="/webinar" className={`nav-link ${isActive("/webinar") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
+            </Link>
+            <Link href="/webinar" className={`nav-link ${isActive("/webinar") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
               Webinar
-            </a>
-            <a href="/our-story" className={`nav-link ${isActive("/our-story") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
+            </Link>
+            <Link href="/our-story" className={`nav-link ${isActive("/our-story") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
               About us
-            </a>
-            <a href="/services" className={`nav-link ${isActive("/services") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
+            </Link>
+            <Link href="/services" className={`nav-link ${isActive("/services") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
               Services
-            </a>
-            
-            <a className="mt-4 px-8 py-3 bg-blue-600 rounded-full text-white font-semibold" onClick={closeMenu}>
-              Let's talk
-            </a>
+            </Link>
+            <button type="button" className="mt-4 px-8 py-3 bg-blue-600 rounded-full text-white font-semibold" onClick={closeMenu}>
+              Let&apos;s talk
+            </button>
           </nav>
         </div>,
         document.body

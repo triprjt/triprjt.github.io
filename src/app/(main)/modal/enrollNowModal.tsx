@@ -96,7 +96,7 @@ const EnrollNowModal = ({ open, onOpenChange }: EnrollNowModalProps) => {
             Enroll Now
           </DialogTitle>
           <DialogDescription className="text-[var(--card-paragraph)]">
-            Fill out the form below to enroll in our bootcamp. We'll get back to you soon!
+            Fill out the form below to enroll in our bootcamp. We&apos;ll get back to you soon!
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">

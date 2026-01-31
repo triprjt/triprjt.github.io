@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "../globals.css";
 import Footer from "./Footer";
 import { OfferWrapper } from "./OfferWrapper";
@@ -14,21 +15,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Define navigation links
-  const links = [
-    { text: "About me", href: "/#whoami" },
-    { text: "My work", href: "/#mywork" },
-    { text: "Blog", href: "/blog" },
-  ];
   return (
     <>
         {/* <OfferWrapper /> */}
         <header className="header-container sticky top-0">
           {/* //logo */}
           <div className="flex items-center justify-between">
-            <a href="/" className="cursor-pointer w-24 p-4 my-auto align-middle items-center"><span className="text-blue-500 text-2xl">10x<span className="text-white text-2xl">AI</span><span className="text-white text-2xl">Bootcamp</span></span></a>
+            <Link href="/" className="cursor-pointer w-24 p-4 my-auto align-middle items-center"><span className="text-blue-500 text-2xl">10x<span className="text-white text-2xl">AI</span><span className="text-white text-2xl">Bootcamp</span></span></Link>
             <MobileMenu />
-            <button className="cta-button-header hidden md:block">Let's talk</button>
+            <button className="cta-button-header hidden md:block">Let&apos;s talk</button>
           </div>
         </header>
         {children}

@@ -61,7 +61,7 @@ export default function ComparisonTable() {
       {/* Header */}
       <div className="text-center space-y-4 max-w-3xl px-6">
         <h2 className="text-3xl md:text-5xl font-bold font-heading tracking-tight text-[#fffffe]">
-          Don't just watch. <span className="text-[#ff8906] relative inline-block">
+          Don&apos;t just watch. <span className="text-[#ff8906] relative inline-block">
             Build.
             <svg className="absolute w-full h-2 bottom-0 left-0 translate-y-2 text-[#ff8906]" viewBox="0 0 100 10" preserveAspectRatio="none">
               <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />

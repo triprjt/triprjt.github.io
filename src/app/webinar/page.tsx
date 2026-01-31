@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { Calendar, Clock, ArrowRight, ExternalLink, ChevronLeft, ChevronRight, AlertCircle, ChevronDown, History } from 'lucide-react';
 
 // Define Event Interface
@@ -20,41 +21,26 @@ interface Event {
 }
 
 const Webinar = () => {
-  const [open, setOpen] = useState(false);
-  
   // New State for Toggle
   const [showPastEvents, setShowPastEvents] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
-  // --- Helper: Get Upcoming Day ---
-  // Returns the next occurrence of a specific day index (0=Sun, 3=Wed)
-  // If today is the specific day, it returns Today.
-  const getNextDayOfWeek = (dayIndex: number) => {
-    const now = new Date();
-    const currentDay = now.getDay();
-    
-    // Calculate days to add to get to the target day
-    // The modulo 7 ensures we wrap around the week correctly
-    let daysToAdd = (dayIndex + 7 - currentDay) % 7;
-    
-    // Optional: If you always want "Next Sunday" to skip today (if today is Sunday),
-    // uncomment the line below:
-    // if (daysToAdd === 0) daysToAdd = 7;
-
-    const nextDate = new Date(now);
-    nextDate.setDate(now.getDate() + daysToAdd);
-    return nextDate;
-  };
-
-  const getNextSunday = () => getNextDayOfWeek(0);
-  const getNextWednesday = () => getNextDayOfWeek(3);
-
   // --- Generate Data ---
   const { futureEvents, pastEvents } = useMemo(() => {
-    
+    // Helper: get next occurrence of day index (0=Sun, 3=Wed)
+    const getNextDayOfWeek = (dayIndex: number) => {
+      const now = new Date();
+      const currentDay = now.getDay();
+      const daysToAdd = (dayIndex + 7 - currentDay) % 7;
+      const nextDate = new Date(now);
+      nextDate.setDate(now.getDate() + daysToAdd);
+      return nextDate;
+    };
+    const getNextSunday = () => getNextDayOfWeek(0);
+    const getNextWednesday = () => getNextDayOfWeek(3);
+
     // 1. Prepare Dynamic Dates for Future Events
-    
     // Event 1: Sunday 11:00 AM
     const sunDate = getNextSunday();
     sunDate.setHours(11, 0, 0, 0); // Set time to 11:00 AM
@@ -102,8 +88,8 @@ const Webinar = () => {
     const past: Event[] = [];
     const startDate = new Date('2026-01-01');
     const endDate = new Date(); // Use today as the cutoff
-    
-    let loopDate = new Date(startDate);
+
+    const loopDate = new Date(startDate);
     let idCounter = 3;
 
     while (loopDate < endDate) {
@@ -243,7 +229,7 @@ const Webinar = () => {
             </div>
             <div className="mt-auto flex items-center gap-3">
               <div className="w-10 h-10 bg-gray-300 rounded-full overflow-hidden border-2 border-white/20">
-                <img src="/images/founder.jpg" alt="Rajat Tripathi" className="w-full h-full object-cover" />
+                <Image src="/images/founder.jpg" alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-bold text-white uppercase tracking-wide">Rajat Tripathi</span>
@@ -265,7 +251,7 @@ const Webinar = () => {
             </div>
             <div className="mt-auto flex items-center gap-3">
               <div className="w-10 h-10 bg-gray-300 rounded-full overflow-hidden border-2 border-blue-100">
-                <img src="/images/founder.jpg" alt="Rajat Tripathi" className="w-full h-full object-cover" />
+                <Image src="/images/founder.jpg" alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-bold text-blue-900 uppercase tracking-wide">Rajat Tripathi</span>
@@ -354,7 +340,7 @@ const Webinar = () => {
       <div className="w-full h-full flex items-center justify-center mx-auto flex flex-col gap-10 p-2 md:p-8">
         
         {/* === SECTION 1: Future Events (Always Visible) === */}
-        <div className="flex flex-col gap-8 w-[80%] md:w-[60%]">
+        <div className="flex flex-col gap-8 w-[90%] md:w-[70%]">
           {futureEvents.map((event) => (
             <WebinarCard key={event.id} event={event} isActive={true} />
           ))}

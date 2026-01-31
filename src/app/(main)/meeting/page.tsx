@@ -2,15 +2,19 @@
 
 import { useEffect, useRef } from "react";
 
+interface JitsiMeetExternalAPI {
+  dispose: () => void;
+}
+
 declare global {
   interface Window {
-    JitsiMeetExternalAPI: any;
+    JitsiMeetExternalAPI: new (domain: string, options: { roomName: string; parentNode: HTMLElement }) => JitsiMeetExternalAPI;
   }
 }
 
 export default function MeetingPage() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const apiRef = useRef<any>(null);
+  const apiRef = useRef<JitsiMeetExternalAPI | null>(null);
 
   useEffect(() => {
     // Load the Jitsi script

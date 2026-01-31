@@ -59,7 +59,7 @@ const MeetTheFounder = () => {
           <div className="flex flex-col gap-8 md:gap-10 order-2 lg:order-1 items-center lg:items-start">
             {/* Main message */}
             <h2 className="font-body text-zinc-700 text-center lg:text-left text-xl sm:text-2xl md:text-3xl font-medium leading-relaxed tracking-tight max-w-3xl">
-              I have spent more than 10 years in the software industry and my goal isn't just to teach you AI – it's to help you think clearly about Gen AI, get confident in using Gen AI, and build skills that you'll use for life.
+              I have spent more than 10 years in the software industry and my goal isn&apos;t just to teach you AI – it&apos;s to help you think clearly about Gen AI, get confident in using Gen AI, and build skills that you&apos;ll use for life.
             </h2>
 
             {/* Achievement badges */}
