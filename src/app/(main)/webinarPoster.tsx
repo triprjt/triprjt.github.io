@@ -45,7 +45,7 @@ const WebinarPoster = ({
                         {/* 4. Conditional Rendering based on URL type */}
                         {webinarType === 'business' ? (
                             // BUSINESS HEADLINE
-                            <h1 className="text-black base:text-4xl sm:text-4xl md:text-5xl font-extrabold leading-[0.95] tracking-tight line-height-8">
+                            <h1 className="text-black text-3xl sm:text-5xl md:text-5xl font-extrabold leading-[1.15] tracking-tight line-height-8">
                                 Learn how to<br />
                                 get maximum <br />
                                 leverage with AI<br />
