@@ -53,14 +53,13 @@ const EnrollNowModal = ({ open, onOpenChange }: EnrollNowModalProps) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
-
     try {
-      const response = await fetch("/api/enroll", {
+      const response = await fetch("/api/enroll-webinar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, eventTypeParam: 'bootcamp' }),
       });
 
       if (response.ok) {

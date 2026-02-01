@@ -26,7 +26,7 @@ const COUNTRY_CODES = [
     { code: "+31", country: "Netherlands" },
 ];
 
-export default function RegistrationForm({ webinarTitle }: { webinarTitle: string }) {
+export default function RegistrationForm({ webinarTitle, eventType }: { webinarTitle: string, eventType: string }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
     const [phoneCountryCode, setPhoneCountryCode] = useState("+91");
@@ -63,10 +63,11 @@ export default function RegistrationForm({ webinarTitle }: { webinarTitle: strin
         const payload = {
             ...formData,
             phone: `${phoneCountryCode} ${formData.phone.trim()}`.trim(),
+            eventTypeParam: eventType,
         };
 
         try {
-            const res = await fetch("/api/enroll", {
+            const res = await fetch("/api/enroll-webinar", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload),

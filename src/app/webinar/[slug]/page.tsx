@@ -12,6 +12,7 @@ const WEBINARS = {
     time: "11:00 AM IST",
     speaker: "Stewart Bond",
     topic: "What Real-Time means for AI",
+    eventType: "sunday_webinar",
   },
   "build-ai-agents-for-your-business": {
     title: "Build AI Agents & Automations for your business",
@@ -19,6 +20,7 @@ const WEBINARS = {
     time: "9:00 PM IST",
     speaker: "Rajat",
     topic: "Next.js 15 and Beyond",
+    eventType: "wednesday_webinar",
   },
 };
 
@@ -64,7 +66,7 @@ export default async function WebinarLandingPage({ params }: Props) {
 
           {/* Right Column: The Form */}
           <div style={{ marginTop: "40px" }} className="w-full h-full flex items-center justify-center">
-            <RegistrationForm webinarTitle={webinarData.title} />
+            <RegistrationForm webinarTitle={webinarData.title} eventType={webinarData.eventType} />
           </div>
 
         </div>

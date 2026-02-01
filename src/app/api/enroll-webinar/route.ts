@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, jobRole, comments } = body;
+    const { name, email, phone, jobRole, comments, eventTypeParam } = body;
 
     // Validate required fields
     if (!name || !email || !phone || !jobRole) {
@@ -49,7 +49,8 @@ export async function POST(request: NextRequest) {
         email: email,
         phone: phone,
         jobRole: jobRole,
-        comments: comments || ""
+        comments: comments || "",
+        eventType: eventTypeParam
     };
 
     // --- SEND TO GOOGLE SHEETS ---
