@@ -16,10 +16,12 @@ interface Event {
     location: string;
     attendees?: string;
     thumbnailType: 'blue' | 'white'; // To switch between the two distinct visual styles
+    eventType: string;
 }
 
 
 const SocialProofSection = () => {
+    const [selectedEventType, setSelectedEventType] = useState<string | null>(null);
     const stats = [
         { value: '400+', label: 'Workshops' },
         { value: '20,000+', label: 'Professionals Trained' },
@@ -91,7 +93,8 @@ const SocialProofSection = () => {
             dayTime: "Wednesday, 21:00 PM",
             location: "Online Webinar",
             attendees: "283 people attending",
-            thumbnailType: 'blue'
+            thumbnailType: 'blue',
+            eventType: 'wednesday_webinar'
         },
         {
             id: 2,
@@ -102,7 +105,8 @@ const SocialProofSection = () => {
             dateStr: getNextSunday().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             dayTime: "Sunday, 11:00 AM",
             location: "Online Webinar",
-            thumbnailType: 'white'
+            thumbnailType: 'white',
+            eventType: 'sunday_webinar'
         }
     ];
 
@@ -346,7 +350,7 @@ const SocialProofSection = () => {
                                         </span>
                                     ))}
 
-                                    <button onClick={() => setOpen(true)} className="w-full sm:w-auto bg-[#4e71f2] hover:bg-[#4361d1] text-white font-medium py-2.5 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                    <button onClick={() => { setOpen(true); setSelectedEventType(event.eventType); }} className="w-full sm:w-auto bg-[#4e71f2] hover:bg-[#4361d1] text-white font-medium py-2.5 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
                                         Reserve Spot
                                         <ArrowRight className="w-4 h-4" />
                                     </button>
@@ -366,7 +370,7 @@ const SocialProofSection = () => {
                 </div>
 
             </div>
-            <EnrollNowModal open={open} onOpenChange={setOpen} eventType="webinar" />
+            <EnrollNowModal open={open} onOpenChange={setOpen} eventType={selectedEventType as string} />
 
         </div>
     );
