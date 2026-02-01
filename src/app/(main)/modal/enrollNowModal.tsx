@@ -17,9 +17,10 @@ import { Textarea } from "@/app/(main)/components/ui/textarea";
 interface EnrollNowModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  eventType?: string;
 }
 
-const EnrollNowModal = ({ open, onOpenChange }: EnrollNowModalProps) => {
+const EnrollNowModal = ({ open, onOpenChange, eventType="bootcamp" }: EnrollNowModalProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -59,7 +60,7 @@ const EnrollNowModal = ({ open, onOpenChange }: EnrollNowModalProps) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...formData, eventTypeParam: 'bootcamp' }),
+        body: JSON.stringify({ ...formData, eventTypeParam: eventType }),
       });
 
       if (response.ok) {
