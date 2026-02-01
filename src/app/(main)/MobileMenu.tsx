@@ -64,7 +64,7 @@ export const MobileMenu = () => {
       <nav className="hidden md:flex items-center justify-center gap-8 nav-a">
         <Link className={`nav-link ${isActive("/bootcamp") ? activeBorderClass : ""}`} href="/bootcamp">Bootcamp</Link>
         <Link className={`nav-link ${isActive("/webinar") ? activeBorderClass : ""}`} href="/webinar">Webinar</Link>
-        <Link className={`nav-link ${isActive("/our-story") ? activeBorderClass : ""}`} href="/our-story">About us</Link>
+        {/* <Link className={`nav-link ${isActive("/our-story") ? activeBorderClass : ""}`} href="/our-story">About us</Link> */}
         <Link className={`nav-link ${isActive("/services") ? activeBorderClass : ""}`} href="/services">Services</Link>
         {/* Note: I removed the Let's Talk button from here if you want it distinct, add it back if needed */}
       </nav>
@@ -103,9 +103,9 @@ export const MobileMenu = () => {
             <Link href="/webinar" className={`nav-link ${isActive("/webinar") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
               Webinar
             </Link>
-            <Link href="/our-story" className={`nav-link ${isActive("/our-story") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
+            {/* <Link href="/our-story" className={`nav-link ${isActive("/our-story") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
               About us
-            </Link>
+            </Link> */}
             <Link href="/services" className={`nav-link ${isActive("/services") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
               Services
             </Link>

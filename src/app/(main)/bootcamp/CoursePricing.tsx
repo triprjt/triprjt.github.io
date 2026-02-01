@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Check } from 'lucide-react';
+import EnrollNowModal from '../modal/enrollNowModal';
 
 const CoursePricing = () => {
+    const [open, setOpen] = useState(false);
     return (
         <div className="min-h-screen mt-[20px] w-full text-white py-20 px-4 flex flex-col items-center relative overflow-hidden gap-2 md:gap-4">
 
@@ -41,7 +43,7 @@ const CoursePricing = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <button className="w-full mt-12 py-4 rounded-xl bg-gradient-to-b from-[#4F80E2] to-[#365FB5] hover:to-[#2e5099] text-white font-semibold text-lg shadow-[0_4px_14px_0_rgba(59,130,246,0.39)] transition-all transform active:scale-[0.98]">
+                    <button onClick={() => setOpen(true)} className="w-full mt-12 py-4 rounded-xl bg-gradient-to-b from-[#4F80E2] to-[#365FB5] hover:to-[#2e5099] text-white font-semibold text-lg shadow-[0_4px_14px_0_rgba(59,130,246,0.39)] transition-all transform active:scale-[0.98]">
                         Join the Cohort
                     </button>
                 </div>
@@ -79,7 +81,7 @@ const CoursePricing = () => {
                         <p className="text-gray-300 text-sm md:text-base mb-6 text-center md:text-left">
                             Want to understand how our course aligns with your AI goals? We are here to help!
                         </p>
-                        <button style={{ marginTop: '10px' }} className="w-full py-3 rounded-lg bg-[#272A38] hover:bg-[#313545] border border-white/5 text-gray-200 font-medium transition-colors">
+                        <button onClick={() => window.open('https://cal.com/tripathirajat', '_blank')} style={{ marginTop: '10px' }} className="w-full py-3 rounded-lg bg-[#272A38] hover:bg-[#313545] border border-white/5 text-gray-200 font-medium transition-colors">
                             Book a Consultation
                         </button>
                     </div>
@@ -87,6 +89,7 @@ const CoursePricing = () => {
                 </div>
 
             </div>
+            <EnrollNowModal open={open} onOpenChange={setOpen} />
         </div>
     );
 };
