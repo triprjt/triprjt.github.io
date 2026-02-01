@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "./(main)/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -63,12 +62,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Define navigation links
-  const links = [
-    { text: "About me", href: "/#whoami" },
-    { text: "My work", href: "/#mywork" },
-    { text: "Blog", href: "/blog" },
-  ];
   return (
     <html lang="en">
       <body
