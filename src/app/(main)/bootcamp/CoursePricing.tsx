@@ -19,13 +19,13 @@ const CoursePricing = () => {
             </div>
 
             {/* Main Pricing Card Container */}
-            <div className="relative w-full max-w-6xl bg-[#0A0A0A] rounded-[32px] border border-white/10 flex flex-col md:flex-row overflow-hidden shadow-2xl">
+            <div className="relative w-full md:max-w-6xl bg-[#0A0A0A] rounded-[32px] border border-white/10 flex flex-col md:flex-row overflow-hidden shadow-2xl">
 
                 {/* --- LEFT SECTION (Price & Basic Features) --- */}
-                <div className="w-full md:w-[40%] bg-[#151925] p-8 md:p-12 flex flex-col justify-around border-r border-white/5">
-                    <div className="flex flex-col justify-between items-between gap-2 md:gap-4">
+                <div className="w-full md:w-[40%] bg-[#151925] p-8 md:p-12 flex flex-col justify-around border-r border-white/5 gap-6 md:gap-8">
+                    <div className="flex flex-col justify-between items-between gap-4 md:gap-6">
                         {/* Price Tag */}
-                        <div className="mb-2 relative">
+                        <div className="mb-2 relative flex flex-col gap-4 md:gap-6">
                             <div className='flex gap-2 md:gap-4'>
                                 <span className="bg-[var(--highlight)] rounded-full px-2 py-1 text-white text-xs">inclusive everything</span>
                                 <span className="text-white bg-[var(--highlight)] rounded-full px-2 py-1 text-xs">one-time payment</span>
@@ -47,7 +47,7 @@ const CoursePricing = () => {
                 </div>
 
                 {/* --- RIGHT SECTION (Detailed Benefits) --- */}
-                <div className="w-full md:w-[60%] bg-[#080808] p-8 md:p-12 gap-6 md:gap-0 flex flex-col">
+                <div className="w-full md:w-[60%] bg-[#080808] p-2 md:p-12 gap-6 md:gap-0 flex flex-col">
 
                     <h3 className="text-xl font-bold mb-8 text-white">What you get:</h3>
 

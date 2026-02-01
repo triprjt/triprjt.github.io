@@ -103,7 +103,7 @@ const WhoShouldJoin = () => {
             {/* Background Gradients for section depth */}
             <div className=" absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-900/20 rounded-full blur-[120px] -z-10" />
 
-            <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-12">
+            <div className="w-fulls mx-auto px-2 md:px-6 flex flex-col items-center gap-12">
                 {/* Section Header */}
                 <div className="text-center space-y-4">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold uppercase tracking-wider text-zinc-400">

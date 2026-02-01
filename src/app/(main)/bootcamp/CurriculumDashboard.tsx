@@ -19,15 +19,17 @@ import {
   Star,
   CheckCircle2,
   Target,
-  ChevronRight
+  ChevronRight,
+  ChevronLeft,
 } from 'lucide-react';
+
 
 // --- Data Structure ---
 const modules = [
   {
     id: 1,
     title: "Module 1",
-    subtitle: "Basics of Gen AI and How to Get Started",
+    subtitle: "Basics of Gen AI",
     icon: <BookOpen className="w-5 h-5" />,
     headerInfo: {
       headline: "The Fundamentals & APIs",
@@ -276,8 +278,8 @@ export default function CurriculumDashboard() {
   }, [activeModule]);
 
   return (
-    <div className="min-h-[80vh] w-full flex flex-col justify-start md:justify-around items-center text-[#0f0e17] bg-[#eff0f3] py-12 px-1 md:p-4 font-body">
-      
+    <div className="min-h-[80vh] full-bleed-section w-full flex flex-col justify-start md:justify-around items-center text-[#0f0e17] bg-[#eff0f3] py-12 px-1 md:p-4 font-body">
+
       {/* Main Heading */}
       <h1 style={{ marginBottom: '40px' }} className="text-3xl md:text-5xl font-heading font-bold text-[#0f0e17] tracking-tight mb-8">
         Curriculum
@@ -290,6 +292,7 @@ export default function CurriculumDashboard() {
           className="lg:col-span-4 w-full flex lg:flex-col lg:justify-center lg:items-center gap-3 overflow-x-auto pb-4 lg:pb-0 px-4 md:px-0 snap-x hide-scrollbar"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
+          <ChevronLeft size={20} />
           {modules.map((module) => (
             <button
               key={module.id}
@@ -303,7 +306,7 @@ export default function CurriculumDashboard() {
               }}
               onClick={() => setActiveModule(module.id)}
               className={`
-                w-[85%] md:min-w-[300px] lg:w-full flex-shrink-0 snap-center
+                w-[80%] md:max-w-[300px] lg:w-full flex-shrink-0 snap-center
                 text-left transition-all duration-300 group relative overflow-hidden rounded-xl border-2 p-2 md:p-4 flex items-center gap-4
                 ${activeModule === module.id
                   ? 'bg-white border-[#0f0e17] shadow-lg scale-[1.02]' // Active: White bg, Green border, Pop effect
@@ -336,14 +339,15 @@ export default function CurriculumDashboard() {
               </div>
             </button>
           ))}
+          <ChevronRight size={20} className="block md:hidden text-gray-300" />
         </div>
 
         {/* --- RIGHT CONTENT AREA --- */}
-        <div className="lg:col-span-8 px-4 md:px-0">
+        <div className=" lg:col-span-8 px-2 md:px-0">
 
           <div className="h-full w-full 
             rounded-3xl
-            bg-[#0f0e17] border border-white/10 p-6 md:p-10 relative overflow-hidden shadow-2xl text-[#fffffe]">
+             bg-[#0f0e17] border border-white/10 p-1 md:p-10 relative overflow-hidden shadow-2xl text-[#fffffe]">
 
             {/* Decorative Glow */}
             <div className="absolute top-0 right-0 w-2/3 h-full bg-[#232946]/20 blur-3xl pointer-events-none" />
@@ -352,17 +356,17 @@ export default function CurriculumDashboard() {
               <div className="relative z-10 animate-fadeIn flex flex-col gap-8">
 
                 {/* 1. Header Section */}
-                <div className="space-y-3">
-                  <h2 className="text-2xl md:text-4xl font-heading font-bold text-[#fffffe] tracking-tight">
+                <div className="space-y-3 p-2">
+                  <h2 className="text-xl md:text-4xl font-heading font-bold text-[#fffffe] tracking-tight">
                     {activeData.headerInfo.headline}
                   </h2>
-                  <p className="text-[#a7a9be] text-base md:text-lg font-light leading-relaxed max-w-2xl">
+                  <p className="text-[#a7a9be] text-base md:text-lg font-light leading-relaxed w-full">
                     {activeData.headerInfo.subHeadline}
                   </p>
                 </div>
 
                 {/* 2. Goals & Outcomes Badges */}
-                <div className="flex flex-col md:flex-row gap-6 md:gap-12 pb-4 border-b border-[#a7a9be]/20">
+                <div className="flex flex-col p-2 md:flex-row gap-6 md:gap-12 pb-4 border-b border-[#a7a9be]/20">
                   {/* Goals */}
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2 text-xs font-bold text-[#a7a9be] uppercase tracking-wider">
@@ -397,7 +401,7 @@ export default function CurriculumDashboard() {
                   {activeData.steps?.map((step, idx) => (
                     <div
                       key={idx}
-                      className="group flex flex-col sm:flex-row items-start sm:items-center gap-4 p-5 rounded-2xl 
+                      className="group flex flex-col sm:flex-row items-start sm:items-center gap-4 p-2 rounded-2xl 
                         bg-white/5 backdrop-blur-md border border-white/10
                         hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:shadow-purple-500/10
                         transition-all duration-300"
@@ -412,7 +416,7 @@ export default function CurriculumDashboard() {
                       {/* Content */}
                       <div className="flex-grow w-full min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-1">
-                          <h3 className="text-lg font-heading font-bold text-white truncate group-hover:text-[#46db89] transition-colors">
+                          <h3 className="base:text-md md:text-lg font-heading font-bold text-white truncate group-hover:text-[#46db89] transition-colors">
                             {step.title}
                           </h3>
                           <span className="px-2 py-0.5 rounded bg-white/10 border border-white/10 text-white text-[10px] font-bold uppercase tracking-wider">
@@ -426,7 +430,7 @@ export default function CurriculumDashboard() {
 
                         <DifficultyRating level={step.difficulty} />
                       </div>
-                      
+
                     </div>
                   ))}
                 </div>

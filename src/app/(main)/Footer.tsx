@@ -59,27 +59,33 @@ const Footer = () => {
 
                         {/* Resources */}
                         <div className="flex flex-col items-start justify-start gap-2 md:gap-6">
-                            <h3 className="md:text-2xl text-xl font-bold">Resources</h3>
-                            <FooterLink href="#">Free Courses</FooterLink>
-                            <FooterLink href="#">Free Tools</FooterLink>
-                            <FooterLink href="#">10x AI Roadmap </FooterLink>
+                            <h3 className="base:text-sm md:text-2xl font-bold">Resources</h3>
+                            <div className="flex flex-col items-start justify-start gap-1 md:gap-3">
+                                <FooterLink href="#">Free Courses</FooterLink>
+                                <FooterLink href="#">Free Tools</FooterLink>
+                                <FooterLink href="#">10x AI Roadmap </FooterLink>
+                            </div>
                         </div>
 
                         <div className="flex flex-col items-start justify-start gap-2 md:gap-6">
 
-                            <h3 className="md:text-2xl text-xl font-bold">Services</h3>
-                            <FooterLink href="#">Corporate Training</FooterLink>
-                            <FooterLink href="#">AI consulting</FooterLink>
-                            <FooterLink href="#">AI workshops </FooterLink>
+                            <h3 className="base:text-sm md:text-2xl font-bold">Services</h3>
+                            <div className="flex flex-col items-start justify-start gap-1 md:gap-3">
+                                <FooterLink href="#">Corporate Training</FooterLink>
+                                <FooterLink href="#">AI consulting</FooterLink>
+                                <FooterLink href="#">AI workshops </FooterLink>
+                            </div>
                         </div>
 
                         {/* Navigation Links */}
                         <nav className="flex flex-col items-start justify-start gap-2 md:gap-6">
-                            <h3 className="md:text-2xl text-xl font-bold">Company</h3>
-                            <FooterLink href="#">Terms</FooterLink>
-                            <FooterLink href="#">Refund policy</FooterLink>
-                            <FooterLink href="#">Privacy</FooterLink>
-                            <FooterLink href="#">Contact</FooterLink>
+                            <h3 className="base:text-sm md:text-2xl font-bold">Company</h3>
+                            <div className="flex flex-col items-start justify-start gap-1 md:gap-3">
+                                <FooterLink href="#">Terms</FooterLink>
+                                <FooterLink href="#">Refund policy</FooterLink>
+                                <FooterLink href="#">Privacy</FooterLink>
+                                <FooterLink href="#">Contact</FooterLink>
+                            </div>
                         </nav>
 
                         {/* Copyright (Shown on mobile bottom only) */}
@@ -97,7 +103,7 @@ const Footer = () => {
 const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
     <a
         href={href}
-        className="text-gray-800 hover:text-[var(--highlight)] font-semibold text-sm md:text-base transition-colors duration-200"
+        className="text-gray-800 hover:text-[var(--highlight)] font-semibold base:text-xs md:text-base transition-colors duration-200"
     >
         {children}
     </a>

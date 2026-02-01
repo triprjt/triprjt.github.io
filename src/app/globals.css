@@ -296,9 +296,15 @@ body {
 /* Full-width sections with inner padding for content */
 .full-bleed-section {
   width: 100%;
-  padding: clamp(3rem, 4vw, 3rem);
-}
 
+  /* Default padding on small screens (mobile-first) */
+  padding: clamp(1.5rem, 5vw, 2rem);
+
+  /* Override with larger padding starting from md breakpoint */
+  @media (min-width: 768px) {
+    padding: clamp(3rem, 4vw, 3rem);
+  }
+}
 /* For dark alternating blocks */
 .full-bleed-dark {
   background-color: var(--card-background);
@@ -420,19 +426,26 @@ footer,
 }
 
 .animation-container {
-  width: 100%;           /* Container takes full width of parent */
-  max-width: 800px;      /* Stops it from getting too huge on desktops */
-  margin: 0 auto;        /* Centers the container */
-  border-radius: 12px;   /* Optional: Rounded corners */
-  overflow: hidden;      /* Keeps the corners rounded */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Optional: Soft shadow */
+  width: 100%;
+  /* Container takes full width of parent */
+  max-width: 800px;
+  /* Stops it from getting too huge on desktops */
+  margin: 0 auto;
+  /* Centers the container */
+  border-radius: 12px;
+  /* Optional: Rounded corners */
+  overflow: hidden;
+  /* Keeps the corners rounded */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Optional: Soft shadow */
 }
 
 /* Use this if you chose Option A (Video) */
 .animation-container video {
   width: 100%;
   height: auto;
-  display: block; /* Removes tiny whitespace under video */
+  display: block;
+  /* Removes tiny whitespace under video */
 }
 
 /* Use this if you chose Option B (Image) */
