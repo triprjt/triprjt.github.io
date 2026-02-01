@@ -188,17 +188,17 @@ const EnrollNowModal = ({ open, onOpenChange, eventType="bootcamp" }: EnrollNowM
 
           {submitStatus === "success" && (
             <div className="p-3 rounded-md bg-green-500/20 border border-green-500/50 text-green-400 text-sm">
-              Thank you! Your enrollment request has been submitted successfully.
+              Thank you! Check your email for the confirmation.
             </div>
           )}
 
           {submitStatus === "error" && (
             <div className="p-3 rounded-md bg-red-500/20 text-red-400 text-sm">
-              Something went wrong. Please try again later.
+              Oh no! Something went wrong. Please try again later.
             </div>
           )}
 
-          <DialogFooter className="flex justify-center items-center gap-3 p-2 md:p-4">
+          <DialogFooter className="flex w-full justify-center items-center gap-3 p-2 md:p-4">
             <Button
               type="button"
               variant="outline"
