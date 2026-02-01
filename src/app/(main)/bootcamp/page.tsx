@@ -36,7 +36,7 @@ export default function BootcampComponent() {
                     <div
                         key={item.id}
                         // Switch to a 2-column grid. Text on left, Image on right.
-                        className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center md:w-3/5 pb-12 last:border-0"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center md:w-3/5 pb-12"
                     >
                         {/* Column 1: Title */}
                         <div className={`flex flex-col justify-center gap-2 md:gap-4 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
