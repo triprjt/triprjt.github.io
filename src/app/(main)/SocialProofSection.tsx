@@ -366,7 +366,7 @@ const SocialProofSection = () => {
                 </div>
 
             </div>
-            <EnrollNowModal open={open} onOpenChange={setOpen} />
+            <EnrollNowModal open={open} onOpenChange={setOpen} eventType="webinar" />
 
         </div>
     );

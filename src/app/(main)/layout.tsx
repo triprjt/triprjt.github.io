@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import { OfferWrapper } from "./OfferWrapper";
 import { MobileMenu } from "./MobileMenu";
 
+const BUILD_VERSION = Date.now();
 export const metadata: Metadata = {
   title: "10x AI Bootcamp – Become Top 1% with AI Skills",
   description:
@@ -57,17 +58,27 @@ export default function RootLayout({
 }>) {
   return (
     <>
-        {/* <OfferWrapper /> */}
-        <header className="header-container sticky top-0 z-[100]">
-          {/* //logo */}
-          <div className="flex items-center justify-between">
-            <Link href="/" className="cursor-pointer w-24 p-4 my-auto align-middle items-center"><span className="text-blue-500 text-2xl">10x<span className="text-white text-2xl">AI</span><span className="text-white text-2xl">Bootcamp</span></span></Link>
-            <MobileMenu />
-            <button className="cta-button-header hidden md:block">Let&apos;s talk</button>
-          </div>
-        </header>
-        {children}
-        <Footer />
+      {/* <OfferWrapper /> */}
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="10x AI Bootcamp" />
+        <link rel="apple-touch-icon" href="/images/icon-ai.png" />
+        <meta name="description" content="Master Generative AI, build real-world AI agents & apps. Join the 10x AI Bootcamp and become the top 1% in your job. Enroll now and transform your career!" />
+        <meta name="build-version" content={BUILD_VERSION.toString()} />
+      </head>
+      <header className="header-container sticky top-0 z-[100]">
+        {/* //logo */}
+        <div className="flex items-center justify-between">
+          <Link href="/" className="cursor-pointer w-24 p-4 my-auto align-middle items-center"><span className="text-blue-500 text-2xl">10x<span className="text-white text-2xl">AI</span><span className="text-white text-2xl">Bootcamp</span></span></Link>
+          <MobileMenu />
+          <button className="cta-button-header hidden md:block">Let&apos;s talk</button>
+        </div>
+      </header>
+      {children}
+      <Footer />
     </>
   );
 }
