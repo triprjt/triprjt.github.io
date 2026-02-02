@@ -2,7 +2,7 @@
 import NonCoderGraphic from "@/app/(main)/picturesForLandingPages/noncoder";
 // import Bootcamp from "./page";
 import DiagonalBox from "@/app/(main)/picturesForLandingPages/diagonalBox";
-import CoursePricing from "./CoursePricing";
+
 import ComparisonTable from "./Comparison";
 import TechStackGrid from "@/app/(main)/picturesForLandingPages/modernStack";
 import BootcampHeader from "../bootcamp";
