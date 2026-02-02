@@ -57,7 +57,7 @@ export default async function WebinarLandingPage({ params }: Props) {
             <div className="rounded-2xl overflow-hidden shadow-2xl shadow-green-900/20 my-auto">
               <WebinarBanner urlType={webinarData.title} dateStr={webinarData.date} timeStr={webinarData.time} />
             </div>
-            
+
             {/* Optional: Mobile-only helper text */}
             <p className="xl:hidden text-center text-gray-500 text-sm">
               Scroll down to register
