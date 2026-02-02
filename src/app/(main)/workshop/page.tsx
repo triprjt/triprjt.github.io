@@ -29,7 +29,7 @@ export default async function WebinarLandingPage() {
             {/* Your Existing Poster Component */}
             {/* Added shadow/glow to separate it from background */}   
             <div className="rounded-2xl overflow-hidden shadow-2xl shadow-green-900/20 my-auto flex items-center justify-center">
-              <Image src={`${DG_OCEAN_ORIGIN}/workshop2.png`} alt="Workshop" width={1000} height={1000} />
+              <Image src={`${DG_OCEAN_ORIGIN}/workshop3.png`} alt="Workshop" width={1000} height={1000} />
             </div>
             
             {/* Optional: Mobile-only helper text */}
