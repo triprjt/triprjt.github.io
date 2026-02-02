@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import dotenv from 'dotenv'
-dotenv.config();
+import { GOOGLE_SCRIPT_URL } from "@/env";
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,10 +13,6 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-
-    // Get Google Apps Script Web App URL from environment variable
-    const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
-    console.log("GOOGLE_SCRIPT_URL", GOOGLE_SCRIPT_URL);
 
     if (!GOOGLE_SCRIPT_URL) {
       console.error("GOOGLE_SCRIPT_URL environment variable is not set");

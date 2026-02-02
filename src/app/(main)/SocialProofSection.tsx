@@ -4,6 +4,7 @@ import { MessageSquare } from 'lucide-react';
 import { Calendar, Clock, MapPin, Users, ArrowRight } from 'lucide-react';
 import EnrollNowModal from './modal/enrollNowModal';
 import { useRouter } from 'next/navigation';
+import { DG_OCEAN_ORIGIN } from '@/env';
 
 interface Event {
     id: number;
@@ -209,7 +210,7 @@ const SocialProofSection = () => {
         */}
                     <div className="p-2 group-hover:scale-110 transition-transform duration-300">
                         <Image
-                            src="/images/logos_whatsapp-icon.svg"
+                            src={`${DG_OCEAN_ORIGIN}/logos_whatsapp-icon.svg`}
                             alt="WhatsApp"
                             width={38}
                             height={38}
@@ -254,7 +255,7 @@ const SocialProofSection = () => {
                                         <div className="mt-auto flex items-center gap-3">
                                             <div className="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
                                                 {/* Placeholder for person avatar */}
-                                                <img src="/images/founder.jpg" alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
+                                                <img src={`${DG_OCEAN_ORIGIN}/founder.jpg`} alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
                                             </div>
                                             <div className="flex flex-col">
                                                 <span className="text-base md:text-md font-bold text-white uppercase">Rajat Tripathi</span>
@@ -277,7 +278,7 @@ const SocialProofSection = () => {
                                         <div className="mt-auto flex items-center gap-3">
                                             <div className="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
                                                 {/* Placeholder for person avatar */}
-                                                <img src="/images/founder.jpg" alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
+                                                <img src={`${DG_OCEAN_ORIGIN}/founder.png`} alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
                                             </div>
                                             <div className="flex flex-col">
                                                 <span className="text-base md:text-md font-bold text-blue-600 uppercase">Rajat Tripathi</span>

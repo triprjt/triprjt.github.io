@@ -19,6 +19,7 @@ const WebinarPoster = ({
     const webinarType = isBusinessContext ? "business" : "personal";
     const displayDate = dateStr;
     const displayTime = timeStr;
+    const DG_OCEAN_ORIGIN = process.env.NEXT_PUBLIC_DG_OCEAN_ORIGIN;
 
     console.log('dateStr from poster', dateStr);
 
@@ -102,7 +103,7 @@ const WebinarPoster = ({
 
                         <div className="absolute -right-4 bottom-[-20px] md:-right-22 md:-bottom-10 w-40 sm:w-48 md:w-80 h-auto overflow-visible pointer-events-none">
                             <Image
-                                src="/images/founder.jpg"
+                                src={`${DG_OCEAN_ORIGIN}/founder.jpg`}
                                 alt="Rajat Tripathi"
                                 width={224}
                                 height={256}

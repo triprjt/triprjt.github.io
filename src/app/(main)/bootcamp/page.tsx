@@ -8,6 +8,7 @@ import TechStackGrid from "@/app/(main)/picturesForLandingPages/modernStack";
 import BootcampHeader from "../bootcamp";
 import Image from "next/image";
 import GenAICurriculum from "./CurriculumDashboard";
+import { DG_OCEAN_ORIGIN } from "@/env";
 export default function BootcampComponent() {
     const whatMakeThisBootcampDifferent = [
         'highly personalised learning tailored to your goals and background',
@@ -23,9 +24,9 @@ export default function BootcampComponent() {
     //     { id: 7, title: 'Capstone: internal company AI use-case', icon: <DiagonalBox />, image: '/images/sec1.png', description: 'Build a Full Stack app where users can chat with any GitHub repository.' }
 
     const whatIsCoveredInBootcamp = [
-        { id: 1, title: 'Perfectly curated roadmap', icon: <NonCoderGraphic />, image: '/images/sec1.png', description: 'No more jumping between random YouTube tutorials. Follow a clear, logical path designed to build your skills step-by-step.' },
-        { id: 2, title: 'Clear and byte sized lessons', icon: <DiagonalBox />, image: '/images/hsection.png', description: 'Each lesson is focused on building your intuition on AI–without any fluff. Suits your busy schedule.' },
-        { id: 3, title: 'Beginner friendly ', icon: <TechStackGrid />, image: '/images/automation.png', description: 'Build your own AI automations –even with no tech background' },
+        { id: 1, title: 'Perfectly curated roadmap', icon: <NonCoderGraphic />, image: `${DG_OCEAN_ORIGIN}/sec1.png`, description: 'No more jumping between random YouTube tutorials. Follow a clear, logical path designed to build your skills step-by-step.' },
+        { id: 2, title: 'Clear and byte sized lessons', icon: <DiagonalBox />, image: `${DG_OCEAN_ORIGIN}/hsection.png`, description: 'Each lesson is focused on building your intuition on AI–without any fluff. Suits your busy schedule.' },
+        { id: 3, title: 'Beginner friendly ', icon: <TechStackGrid />, image: `${DG_OCEAN_ORIGIN}/automation.png`, description: 'Build your own AI automations –even with no tech background' },
     ];
 
     const WhyYouWillLoveLearningHere = () => {

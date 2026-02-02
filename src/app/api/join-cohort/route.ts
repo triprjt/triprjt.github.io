@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { GOOGLE_SCRIPT_URL } from "@/env";
 
 async function POST(request: NextRequest) {
   try {
@@ -8,8 +9,6 @@ async function POST(request: NextRequest) {
     if (!name || !email || !phone) {
       return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
     }
-
-    const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
 
     if (!GOOGLE_SCRIPT_URL) {
       return NextResponse.json({ message: "Server configuration error" }, { status: 500 });

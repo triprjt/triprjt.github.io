@@ -10,8 +10,7 @@ export default function WebinarLayout({
 }>) {
   const BUILD_VERSION = Date.now();
   return (
-    
-    <div className="full-bleed-dark">
+    <>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -23,7 +22,8 @@ export default function WebinarLayout({
         <meta name="build-version" content={BUILD_VERSION.toString()} />
       </head>
       {/* --- WEBINAR SPECIFIC HEADER --- */}
-      <header className="header-container sticky top-0 z-[100]">
+      <div className="full-bleed-dark">
+        <header className="header-container sticky top-0 z-[100]">
           {/* //logo */}
           <div className="flex items-center justify-between z-30">
             <Link href="/" className="cursor-pointer w-24 p-4 my-auto align-middle items-center"><span className="text-blue-500 text-2xl">10x<span className="text-white text-2xl">AI</span><span className="text-white text-2xl">Bootcamp</span></span></Link>
@@ -32,13 +32,14 @@ export default function WebinarLayout({
           </div>
         </header>
 
-      {/* Page Content */}
-      <main className="min-h-screen bg-[#050505]">
-        {children}
-      </main>
+        {/* Page Content */}
+        <main className="min-h-screen bg-[#050505]">
+          {children}
+        </main>
 
-      {/* --- OPTIONAL: Minimal Footer --- */}
-      <Footer />
-    </div>
+        {/* --- OPTIONAL: Minimal Footer --- */}
+        <Footer />
+      </div>
+    </>
   );
 }

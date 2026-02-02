@@ -1,5 +1,14 @@
 // next.config.js
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pictures10xai.sfo3.digitaloceanspaces.com",
+        pathname: "/**",
+      },
+    ],
+  },
   // ✅ Move staleTimes inside experimental
   experimental: {
     staleTimes: {

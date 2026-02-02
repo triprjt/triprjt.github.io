@@ -2,6 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { Calendar, Clock, ArrowRight, ExternalLink, ChevronLeft, ChevronRight, AlertCircle, ChevronDown, History } from 'lucide-react';
+import { DG_OCEAN_ORIGIN } from '@/env';
 
 // Define Event Interface
 interface Event {
@@ -195,7 +196,7 @@ const Webinar = () => {
         target="_blank" 
         rel="noopener noreferrer"
         onClick={() => handleExternalLinkClick(event)}
-        className={`absolute top-4 right-4 p-2.5 rounded-full backdrop-blur-md border transition-colors
+        className={`absolute top-4 z-10 right-4 p-2.5 rounded-full backdrop-blur-md border transition-colors
           ${isActive 
               ? 'bg-white/5 hover:bg-white/10 border-white/10 text-gray-300 hover:text-white' 
               : 'hidden'}
@@ -211,7 +212,7 @@ const Webinar = () => {
         
         {/* Active Badge */}
         {isActive && (
-          <div className="absolute top-0 left-0 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-br-lg animate-pulse flex items-center gap-1 shadow-md">
+          <div className="absolute top-0 left-0 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-br-lg z-10 animate-pulse flex items-center gap-1 shadow-md">
             <AlertCircle className="w-3 h-3" />
             FILLING FAST
           </div>
@@ -229,7 +230,7 @@ const Webinar = () => {
             </div>
             <div className="mt-auto flex items-center gap-3">
               <div className="w-10 h-10 bg-gray-300 rounded-full overflow-hidden border-2 border-white/20">
-                <Image src="/images/founder.jpg" alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
+                <Image src={`${DG_OCEAN_ORIGIN}/founder.jpg`} alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-bold text-white uppercase tracking-wide">Rajat Tripathi</span>
@@ -251,7 +252,7 @@ const Webinar = () => {
             </div>
             <div className="mt-auto flex items-center gap-3">
               <div className="w-10 h-10 bg-gray-300 rounded-full overflow-hidden border-2 border-blue-100">
-                <Image src="/images/founder.jpg" alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
+                <Image src={`${DG_OCEAN_ORIGIN}/founder.jpg`} alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-bold text-blue-900 uppercase tracking-wide">Rajat Tripathi</span>

@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-// import dotenv from 'dotenv'; // Next.js handles .env automatically, usually not needed here but keep if you prefer.
-// dotenv.config();
 
 export async function POST(request: NextRequest) {
+  const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+  const ZOHO_FLOW_URL = process.env.NEXT_PUBLIC_ZOHO_FLOW_URL;
   try {
     const body = await request.json();
     const { name, email, phone, jobRole, comments, eventTypeParam } = body;
@@ -14,9 +14,6 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-
-    const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
-    const ZOHO_FLOW_URL = process.env.ZOHO_FLOW_URL;
 
     if (!ZOHO_FLOW_URL || !GOOGLE_SCRIPT_URL) {
       console.error("Missing environment variables");

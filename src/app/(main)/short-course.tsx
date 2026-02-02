@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
+import { DG_OCEAN_ORIGIN } from "@/env";
 
 const WorkshopCard = ({
 }) => {
@@ -67,7 +68,7 @@ const WorkshopCard = ({
 
                         <div className="absolute -right-4 bottom-[-20px] md:-right-22 md:-bottom-10 w-40 sm:w-48 md:w-80 h-auto overflow-visible pointer-events-none">
                             <Image
-                                src="/images/founder.jpg"
+                                src={`${DG_OCEAN_ORIGIN}/founder.jpg`}
                                 alt="Rajat Tripathi"
                                 width={224}
                                 height={256}

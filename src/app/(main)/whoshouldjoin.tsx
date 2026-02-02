@@ -1,14 +1,15 @@
 "use client";
 
+import { DG_OCEAN_ORIGIN } from "@/env";
 import { CheckCircle2, Sparkles } from "lucide-react";
-
+    
 const WhoShouldJoin = () => {
     const cardContentItems = [
         {
             id: 1,
             title: "Product & Growth Managers",
             // Using Lucide icon or keep your image path
-            icon: "/images/productandgrowth1.jpg",
+            icon: `${DG_OCEAN_ORIGIN}/productandgrowth1.jpg`,
             gradient: "from-blue-500 via-cyan-500 to-teal-500",
             description: [
                 "Learn no-code tools to build MVPs with AI",
@@ -21,7 +22,7 @@ const WhoShouldJoin = () => {
         {
             id: 2,
             title: "Developers & IT Professionals",
-            icon: "/images/developer.jpeg",
+            icon: `${DG_OCEAN_ORIGIN}/developer.jpeg`,
             gradient: "from-purple-500 via-pink-500 to-rose-500",
             description: [
                 "Learn the modern stack: LLM, RAG, Agentic workflows",
@@ -34,7 +35,7 @@ const WhoShouldJoin = () => {
         {
             id: 3,
             title: "Founders & Senior Executives",
-            icon: "/images/executives.png",
+            icon: `${DG_OCEAN_ORIGIN}/executives.png`,
             gradient: "from-amber-400 via-orange-500 to-red-500",
             description: [
                 "Think clearly: Separate the hype from the reality",

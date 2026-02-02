@@ -1,13 +1,16 @@
+'use client';
 import React, { useState } from 'react';
 import { Button } from "@/app/(main)/components/ui/button";
 import { ArrowRight, Play, Maximize2, FileText, Download, CheckCircle2, BookText, Rocket } from "lucide-react";
 import EnrollNowModal from './modal/enrollNowModal';
 import Image from 'next/image';
+
 const Flyer = () => {
     const heading = "Master AI. Build Real Projects. Get Hired.";
     const subheading = "Join us to build real world AI skills.";
     const description = "Learn. Build. Grow 10x.";
     const [open, setOpen] = useState(false);
+    const DG_OCEAN_ORIGIN = process.env.NEXT_PUBLIC_DG_OCEAN_ORIGIN;
     return (
         <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-[var(--card-background)] text-[var(--card-heading)] p-6 md:p-12">
 
@@ -55,19 +58,19 @@ const Flyer = () => {
                 <div className="flex flex-col gap-6 text-center lg:text-left">
                     <div className="space-y-4">
                         <h1
-                            className="font-bold tracking-tight leading-[1.1] text-4xl md:text-[4rem]"                            
+                            className="font-bold tracking-tight leading-[1.1] text-4xl md:text-[4rem]"
                         >
                             Master AI.<br /> Build Real Projects.<br /> Get Hired.
                         </h1>
 
                         <h2
-                            className="font-medium opacity-90 text-2xl md:text-[2rem] text-[var(--card-paragraph)]"                         
+                            className="font-medium opacity-90 text-2xl md:text-[2rem] text-[var(--card-paragraph)]"
                         >
                             {subheading}
                         </h2>
 
                         <p
-                            className="max-w-xl mx-auto lg:mx-0 opacity-70 font-bold leading-relaxed text-sm md:text-base text-[var(--card-paragraph)]"                            
+                            className="max-w-xl mx-auto lg:mx-0 opacity-70 font-bold leading-relaxed text-sm md:text-base text-[var(--card-paragraph)]"
                         >
                             {description}
                         </p>
@@ -101,7 +104,7 @@ const Flyer = () => {
 
                 {/* --- Right Column: Glassmorphism UI --- */}
                 <div className="w-full h-full flex items-center justify-center">
-                    <Image src="/images/hsection.png" alt="Flyer" width={800} height={800} />
+                    <Image src={`${DG_OCEAN_ORIGIN}/hsection.png`} alt="Flyer" width={800} height={800} />
                 </div>
             </div>
             <EnrollNowModal open={open} onOpenChange={setOpen} />
