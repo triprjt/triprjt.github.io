@@ -17,7 +17,7 @@ const LetsTalk = () => {
                     Book a free consultation call with our founder.
                 </p>
 
-                <button className="bg-[#D97706] hover:bg-[#B45309] text-white font-semibold text-lg py-4 px-8 rounded-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(217,119,6,0.39)] hover:shadow-[0_6px_20px_rgba(217,119,6,0.23)] hover:-translate-y-1 flex items-center justify-center gap-2 mx-auto">
+                <button onClick={() => window.open('https://cal.com/tripathirajat', '_blank')} className="bg-[#D97706] hover:bg-[#B45309] text-white font-semibold text-lg py-4 px-8 rounded-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(217,119,6,0.39)] hover:shadow-[0_6px_20px_rgba(217,119,6,0.23)] hover:-translate-y-1 flex items-center justify-center gap-2 mx-auto">
                     <Calendar className="w-5 h-5" />
                     <span>Book a 15min call</span>
                 </button>

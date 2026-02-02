@@ -95,6 +95,7 @@ const Flyer = () => {
                                 color: 'var(--card-heading)',
                                 background: 'transparent'
                             }}
+                            onClick={() => window.open('https://www.10xai.com/bootcamp', '_blank')}
                         >
                             Start strong
                             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
