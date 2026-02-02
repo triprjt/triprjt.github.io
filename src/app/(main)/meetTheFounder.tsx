@@ -1,5 +1,7 @@
 "use client";
 
+import { DG_OCEAN_ORIGIN } from "@/env";
+
 const MeetTheFounder = () => {
   const founderAchievements = [
     { id: 1, text: "IIT Kanpur alumni" },
@@ -74,7 +76,7 @@ const MeetTheFounder = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md lg:max-w-none rounded-2xl overflow-hidden border border-zinc-200 shadow-xl aspect-[4/5] md:aspect-[3/4] lg:aspect-square bg-zinc-100">
               <img
-                src="/images/founder.jpg"
+                src={`${DG_OCEAN_ORIGIN}/founder.jpg`}
                 alt="Founder portrait"
                 className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                 loading="lazy"

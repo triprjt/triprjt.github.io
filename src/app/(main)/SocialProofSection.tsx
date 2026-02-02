@@ -278,7 +278,7 @@ const SocialProofSection = () => {
                                         <div className="mt-auto flex items-center gap-3">
                                             <div className="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
                                                 {/* Placeholder for person avatar */}
-                                                <img src={`${DG_OCEAN_ORIGIN}/founder.png`} alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
+                                                <img src={`${DG_OCEAN_ORIGIN}/founder.jpg`} alt="Rajat Tripathi" width={40} height={40} className="w-full h-full object-cover" />
                                             </div>
                                             <div className="flex flex-col">
                                                 <span className="text-base md:text-md font-bold text-blue-600 uppercase">Rajat Tripathi</span>
