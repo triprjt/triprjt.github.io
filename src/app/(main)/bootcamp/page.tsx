@@ -74,9 +74,9 @@ export default function BootcampComponent() {
             <div id="whyyouwilllovelearninghere" className="full-bleed-section w-full h-full full-bleed-dark">
                 <WhyYouWillLoveLearningHere />
             </div>
-            <div className="full-bleed-section w-full h-full">
+            {/* <div className="full-bleed-section w-full h-full">
                 <CoursePricing />
-            </div>
+            </div> */}
             <div className="full-bleed-section w-full h-full full-bleed-dark">
                 <ComparisonTable />
             </div>
