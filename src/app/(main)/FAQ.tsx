@@ -18,28 +18,28 @@ const FAQ = () => {
     },
     {
       id: 2,
-      question: "What kind of projects will participants actually build?",
-      answer: "Participants build **7 production-style projects** over 12 weeks:\n1. Enterprise RAG system with hybrid search & re-ranking\n2. Multi-agent customer support system\n3. Fine-tuned domain-specific LLM (legal, finance, medical)\n4. Autonomous AI agent with tool use & memory\n5. Cost-optimized inference pipeline (vLLM, quantization)\n6. Full AI product prototype with evals + A/B testing\n7. Capstone: internal company AI use-case\nEvery project includes CI/CD, monitoring, and security review.",
+      question: "I have never coded before and I am in a nont-tech role, can i still join the bootcamp?",
+      answer: "AI has enabled thousands of first time builders to create end-to-end applications\n So, tech skills is no longer a pre-requisite to build. Companies also know this, and they expect you to be able to work with a AI first mindset.",
     },
     {
       id: 3,
-      question: "What measurable business outcomes can we expect?",
-      answer: "Companies that sent 2–5 people in previous cohorts reported:\n• 40–70% faster prototyping of internal AI features\n• 30–60% reduction in inference costs after optimization week\n• Teams started shipping LLM-powered features in 6–10 weeks instead of 6–9 months\n• Several participants were promoted to AI Engineer / AI Product roles within 4–8 months\nWe also offer a post-bootcamp **company consulting call** (2 hours) to help implement one internal use-case.",
+      question: "I am a founder, what measurable business outcomes can i expect from this bootcamp?",
+      answer: "The goal here is to help you leverage AI efficiency to make your company the top1% in your industry. Most founders are stuck in the pre-AI era and this bootcamp will help you shift to the post-AI era.",
     },
     {
       id: 4,
       question: "Is this suitable for people who already know Python and ML?",
-      answer: "Yes — this is explicitly **not** a beginner course.\nWe assume solid Python, basic ML (scikit-learn level), and ideally some exposure to deep learning or LLMs.\nIf your team has 1–2 years of applied ML experience or has already played with OpenAI APIs / LangChain / LlamaIndex, this is the right level. If they are complete beginners, we recommend our free webinar first.",
+      answer: "Your technical skills are definitely a plus, but its not a pre-requisite for this course\n In the course, you will be building AI applications with the modern AI stack and tools.",
     },
     {
       id: 5,
       question: "What happens if someone cannot finish all weeks or misses live sessions?",
-      answer: "Everything is recorded in HD and available forever.\nYou get lifetime access to:\n• All video recordings\n• Code repositories & templates\n• Private Discord + office hours archive\n• Project review channels (submit late)\nMost participants finish projects 1–3 months after the cohort ends — we support you until you do.",
+      answer: "Everything is recorded in HD and available forever–including the live sessions",
     },
     {
       id: 6,
       question: "What is the refund / satisfaction guarantee?",
-      answer: "30-day **full money-back guarantee** — no questions asked.\nIf after the first 4 weeks (including the first two major projects) you or your team feel this is not delivering the promised production-level skills, we refund 100%.\nAfter 30 days we offer a **pro-rated refund** until week 8. After that — lifetime access remains yours.",
+      answer: "There is a 100% money back guarantee, at all times, no questions asked.",
     },
     {
       id: 7,
@@ -49,12 +49,12 @@ const FAQ = () => {
     {
       id: 8,
       question: "Who is teaching and what is their real-world track record?",
-      answer: "Lead instructor: [Your Name] — former AI Lead @ Unicorn.\n• Built production AI systems used by millions\n• Mentored teams at top tech companies\n• Active contributor to LangChain / LlamaIndex\nGuest instructors from top AI companies or recent successful startup founders join for live Q&A.",
+      answer: "Lead instructor: Rajat Tripathi \n•  former Team lead @ Contour–where he built production systems that has handled 10B USD per month in transactions\n• Ex- founder of an edtech company \n• B.Tech from IIT Kanpur and 10+years of overall tech experience",
     },
     {
       id: 9,
-      question: "What do graduates say after 3–6 months?",
-      answer: "Real quotes (with permission):\n• “We shipped our first customer-facing RAG feature 3 weeks after graduation.”\n• “Got promoted to AI Engineer role within 5 months.”\n• “Cut inference bill by 55% using techniques from week 9.”\n(We publish anonymized outcome reports twice a year.)",
+      question: "What do people say about the bootcamp?",
+      answer: "• Non-tech people build their first automation/app with AI and deploy it to production\n• Founders get clarity to shift their company from pre-AI to post-AI era.\n• Job seekers unlock their dream AI role–by building real projects and getting interviews.",
     },
   ];
 
