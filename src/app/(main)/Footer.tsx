@@ -40,7 +40,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full px-4 md:px-20">
 
                     {/* LEFT SIDE: Logo & Copyright */}
-                    <div className="flex flex-col gap-4 md:gap-6 justify-end">
+                    <div className="flex flex-col gap-4 md:gap-6 justify-center items-center">
                         {/* Logo */}
                         <div>
                             <h3 className="text-3xl font-black tracking-tighter text-[#161822]">
