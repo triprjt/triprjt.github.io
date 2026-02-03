@@ -1,10 +1,51 @@
+// src/app/webinar/[slug]/page.tsx
 import React from "react";
 import { notFound } from "next/navigation";
-import WebinarBanner from "../../(main)/webinarPoster"; // Keep your existing path
-import RegistrationForm from "../../(main)/components/registrationForm"; // Update import path
-import Link from "next/link";
+import WebinarClientView from "./WebinarClientView";
 
-// 1. Mock Data Database
+// --- HELPER FUNCTIONS ---
+
+// 1. Converts "February 8, 2026" -> "8th Feb"
+const formatShortDate = (dateStr: string): string => {
+  if (!dateStr) return "";
+  const dateObj = new Date(dateStr);
+  
+  // If Invalid Date, return original string
+  if (isNaN(dateObj.getTime())) return dateStr;
+
+  const day = dateObj.getDate();
+  const month = dateObj.toLocaleString('default', { month: 'short' }); // "Feb"
+
+  // Ordinal suffix logic (st, nd, rd, th)
+  const suffix = ["th", "st", "nd", "rd"];
+  const v = day % 100;
+  const ordinal = suffix[(v - 20) % 10] || suffix[v] || suffix[0];
+
+  return `${day}${ordinal} ${month}`;
+};
+
+// 2. Converts "Sunday, 11:00 AM IST" -> "11:00 am, Sunday"
+const formatShortTime = (timeStr: string): string => {
+  if (!timeStr) return "";
+  
+  // Split "Sunday, 11:00 AM IST" by comma
+  const parts = timeStr.split(',');
+
+  if (parts.length < 2) return timeStr; // Return original if format doesn't match
+
+  const dayName = parts[0].trim(); // "Sunday"
+  
+  // Extract time (e.g., "11:00 AM") using Regex to ignore "IST"
+  // Looks for digits:digits followed by am/pm
+  const timeMatch = parts[1].match(/(\d{1,2}:\d{2}\s?(?:AM|PM))/i);
+  
+  const cleanTime = timeMatch ? timeMatch[0].toLowerCase() : parts[1].trim();
+
+  return `${cleanTime}, ${dayName}`;
+};
+
+// --- MAIN COMPONENT ---
+
 const WEBINARS = {
   "ai-for-10x-productivity": {
     title: "AI for 10x Productivity",
@@ -24,53 +65,46 @@ const WEBINARS = {
   },
 };
 
-type Props = {
-  params: Promise<{ slug: string }>;
+type WebinarData = {
+  title: string;
+  date: string;
+  time: string;
+  speaker: string;
+  eventType: string;
 };
 
-export default async function WebinarLandingPage({ params }: Props) {
-  const { slug } = await params;
-  
-  // 2. Fetch data based on slug
-  const webinarData = WEBINARS[slug as keyof typeof WEBINARS];
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
 
-  // 3. Handle invalid URLs
-  if (!webinarData) {
+export default async function WebinarLandingPage({ params, searchParams }: Props) {
+  const { slug } = await params;
+  const query = await searchParams;
+
+  // 1. Validate Slug
+  const baseWebinar = WEBINARS[slug as keyof typeof WEBINARS];
+  if (!baseWebinar) {
     notFound(); 
   }
 
-  return (
-    <div className="min-h-[80vh] bg-[#050505] flex items-center justify-center p-2 md:p-4">
-      <div className="w-full mx-auto">
-        
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16 items-center justify-center">
-          
-          {/* Left Column: The Poster */}
-          <div className="flex flex-col gap-6 sticky">
-            {/* Context Breadcrumb */}
-            <div style={{ marginBottom: "40px" }} className="text-gray-400 text-sm md:text-base font-mono uppercase tracking-widest mb-10">
-              <Link href="/webinar" className="text-gray-400 hover:text-white">Webinars</Link> / <span className="text-white">{webinarData.title}</span>
-            </div>
+  // 2. Extract raw strings from URL
+  const rawDate = (query.date || baseWebinar.date) as string;
+  const rawTime = (query.time || baseWebinar.time) as string;
 
-            {/* Your Existing Poster Component */}
-            {/* Added shadow/glow to separate it from background */}
-            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-green-900/20 my-auto">
-              <WebinarBanner urlType={webinarData.title} dateStr={webinarData.date} timeStr={webinarData.time} />
-            </div>
+  // 3. Apply formatting
+  const formattedDate = formatShortDate(rawDate);
+  const formattedTime = formatShortTime(rawTime);
 
-            {/* Optional: Mobile-only helper text */}
-            <p className="xl:hidden text-center text-gray-500 text-sm">
-              Scroll down to register
-            </p>
-          </div>
-
-          {/* Right Column: The Form */}
-          <div style={{ marginTop: "40px" }} className="w-full h-full flex items-center justify-center">
-            <RegistrationForm webinarTitle={webinarData.title} eventType={webinarData.eventType} />
-          </div>
-
-        </div>
-      </div>
-    </div>
-  );
+  // 4. Construct Data Object
+  const dataForWebinarPost: WebinarData = {
+    title: baseWebinar.title,
+    date: formattedDate,
+    time: formattedTime,
+    speaker: baseWebinar.speaker,
+    eventType: baseWebinar.eventType,
+  };
+  
+  // 5. Render
+  return <WebinarClientView data={dataForWebinarPost} />;
 }

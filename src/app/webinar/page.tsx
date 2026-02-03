@@ -46,6 +46,7 @@ const Webinar = () => {
     const sunDate = getNextSunday();
     sunDate.setHours(11, 0, 0, 0); // Set time to 11:00 AM
     const sunDateStr = sunDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    console.log('next sunday 999', encodeURIComponent(sunDateStr));
 
     // Event 2: Wednesday 21:00 PM
     const wedDate = getNextWednesday();
