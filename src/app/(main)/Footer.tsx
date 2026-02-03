@@ -55,7 +55,7 @@ const Footer = () => {
                     </div>
 
                     {/* RIGHT SIDE: Socials & Links */}
-                    <div className="grid grid-cols-3 md:grid-cols-3 grid-shrink-0 gap-10 w-[100%] mx-auto justify-between items-start md:w-full">
+                    <div className="hidden grid grid-cols-3 md:grid-cols-3 grid-shrink-0 gap-10 w-[100%] mx-auto justify-between items-start md:w-full">
 
                         {/* Resources */}
                         <div className="flex flex-col items-start justify-start gap-2 md:gap-6">
