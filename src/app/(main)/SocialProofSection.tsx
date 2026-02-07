@@ -86,8 +86,8 @@ const SocialProofSection = () => {
     const events: Event[] = [
         {
             id: 1,
-            title: "Build AI Agents & Automations for your business",
-            description: "Agentic AI and Automations are the talk of 2026! Join us for an interactive workshop where you'll learn how to automate complex workflows with AI agents without writing code.",
+            title: "Hands on learning: Build products with AI",
+            description: "Learn how the top 1% people are building with AI.",
             dateStr: getNextWednesday().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             ideal: ["CXO", "founders", "Leaders"],
             remarks: ["No coding skills required"],
@@ -99,10 +99,10 @@ const SocialProofSection = () => {
         },
         {
             id: 2,
-            title: "AI for 10x productivity at your job",
+            title: "AI: from confusion to clarity",
             ideal: ["Product Managers", "Marketing/Sales", "Designers", "HR"],
             remarks: ["No coding skills required"],
-            description: "Reality check: While you're stuck in sprint planning, creating presentation, writing documentation/PRD's, other PMs are building and shipping actual products using AI. Learn how to bridge the gap between idea and execution.",
+            description: "AI is a new technology and its confusing to understand. Join us for a webinar where we'll clear the confusion and help you understand the foundations.",
             dateStr: getNextSunday().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             dayTime: "Sunday, 11:00 AM",
             location: "Online Webinar",
@@ -295,13 +295,9 @@ const SocialProofSection = () => {
                                     <h3 className="text-2xl font-bold text-white mb-3">
                                         {event.title}
                                     </h3>
-                                    <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6 line-clamp-3 md:line-clamp-none">
+                                    <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
                                         {event.description}
                                     </p>
-
-                                    {/* =========================================== */}
-                                    {/* 👇 NEW: Badges Section (Ideal + Remarks) 👇 */}
-                                    {/* =========================================== */}
                                     <div className="flex flex-col gap-3 mb-6">
 
                                         {/* 1. IDEAL FOR: Highlight Blue, Medium Size */}
@@ -313,7 +309,7 @@ const SocialProofSection = () => {
                                                 {event.ideal.map((role, idx) => (
                                                     <span
                                                         key={idx}
-                                                        className="bg-[var(--highlight)] text-white text-xs md:text-sm font-medium px-3 py-1 rounded-full shadow-[0_2px_10px_rgba(78,113,242,0.3)]"
+                                                        className="bg-[var(--highlight)] text-white text-[10px] md:text-xs font-medium px-3 py-1 rounded-full shadow-[0_2px_10px_rgba(78,113,242,0.3)]"
                                                     >
                                                         {role}
                                                     </span>
@@ -321,11 +317,6 @@ const SocialProofSection = () => {
                                             </div>
                                         )}
                                     </div>
-                                    {/* =========================================== */}
-                                    {/* ☝️ END NEW SECTION ☝️ */}
-                                    {/* =========================================== */}
-
-
                                     {/* Meta Data Grid (Existing) */}
                                     <div className="flex flex-wrap gap-y-3 gap-x-6 text-sm text-gray-300 mb-8">
                                         <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-md">
@@ -351,7 +342,10 @@ const SocialProofSection = () => {
                                         </span>
                                     ))}
 
-                                    <button onClick={() => { setOpen(true); setSelectedEventType(event.eventType); }} className="w-full sm:w-auto bg-[#4e71f2] hover:bg-[#4361d1] text-white font-medium py-2.5 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                    <button onClick={() => { setOpen(true); setSelectedEventType(event.eventType); }} className={`w-full sm:w-auto font-bold py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 text-sm
+                  
+                  bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-900/50
+                  }`}>
                                         Reserve Spot
                                         <ArrowRight className="w-4 h-4" />
                                     </button>

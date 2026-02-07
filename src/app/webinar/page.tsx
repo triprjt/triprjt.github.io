@@ -56,8 +56,8 @@ const Webinar = () => {
     const future: Event[] = [
       {
         id: 1, 
-        title: "AI for 10x productivity at your job",
-        description: "Reality check: While you're stuck in sprint planning, other PMs are building actual products using AI. Learn to bridge the gap.",
+        title: "AI: from confusion to clarity",
+        description: "AI is a new technology and its confusing to understand. Join us for a webinar where we'll clear the confusion and help you understand the foundations.",
         dateObj: sunDate,
         dateStr: sunDateStr,
         ideal: ["Product Managers", "Marketing", "HR"],
@@ -71,8 +71,8 @@ const Webinar = () => {
       },
       {
         id: 2, 
-        title: "Build AI Agents & Automations for your business",
-        description: "Agentic AI and Automations are the talk of 2026! Join us for an interactive workshop where you'll learn how to automate complex workflows.",
+        title: "Hands on learning: Build products with AI",
+        description: "Learn how the top 1% people are building with AI.",
         dateObj: wedDate,
         dateStr: wedDateStr,
         ideal: ["CXO", "Founders", "Leaders"],
@@ -266,7 +266,7 @@ const Webinar = () => {
 
       {/* --- Right Side: Content --- */}
       <div className="p-6 md:p-8 flex flex-col justify-between w-full min-h-[300px]">
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-2">
           <h3 className={`text-2xl font-bold mb-3 leading-snug ${isActive ? 'text-white' : 'text-gray-500'}`}>
             {event.title}
           </h3>
@@ -284,7 +284,7 @@ const Webinar = () => {
               {event.ideal.map((role, idx) => (
                 <span
                   key={idx}
-                  className={`text-[10px] md:text-xs font-medium px-2.5 py-1 rounded-md border
+                  className={`bg-[var(--highlight)] text-white text-[10px] md:text-xs font-medium px-2.5 py-1 rounded-md border
                     ${isActive 
                         ? 'bg-[#1F2937] text-gray-200 border-gray-700' 
                         : 'bg-transparent text-gray-600 border-gray-800'}`}
