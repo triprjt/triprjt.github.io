@@ -4,6 +4,7 @@ import "../globals.css";
 import Footer from "./Footer";
 import { OfferWrapper } from "./OfferWrapper";
 import { MobileMenu } from "./MobileMenu";
+import { LetsTalkButton } from "./LetsTalkButton";
 
 const BUILD_VERSION = Date.now();
 export const metadata: Metadata = {
@@ -74,7 +75,7 @@ export default function RootLayout({
         <div className="flex items-center justify-between">
           <Link href="/" className="cursor-pointer w-24 p-4 my-auto align-middle items-center"><span className="text-blue-500 text-2xl">10x<span className="text-white text-2xl">AI</span><span className="text-white text-2xl">Bootcamp</span></span></Link>
           <MobileMenu />
-          <button className="cta-button-header hidden md:block">Let&apos;s talk</button>
+          <LetsTalkButton />
         </div>
       </header>
       {children}
