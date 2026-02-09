@@ -109,7 +109,7 @@ export const MobileMenu = () => {
             <Link href="/services" className={`nav-link ${isActive("/services") ? "text-purple-400" : "text-white"}`} onClick={closeMenu}>
               Services
             </Link>
-            <button type="button" className="mt-4 px-8 py-3 bg-blue-600 rounded-full text-white font-semibold" onClick={closeMenu}>
+            <button onClick={() => window.open('https://cal.com/tripathirajat', '_blank')} type="button" className="mt-4 px-8 py-3 bg-blue-600 rounded-full text-white font-semibold">
               Let&apos;s talk
             </button>
           </nav>
